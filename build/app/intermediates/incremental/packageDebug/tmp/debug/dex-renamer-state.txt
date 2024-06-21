@@ -1,0 +1,4 @@
+#Thu Jun 20 17:42:05 PST 2024
+base.0=D\:\\xampp\\htdocs\\parking_occupant\\mobile\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

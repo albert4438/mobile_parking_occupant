@@ -1,0 +1,438 @@
+{
+   "checksum": "47019d787111c980a4d0e47818ea413c",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13322907602385977",
+            "date_last_used": "0",
+            "guid": "f163b05d-75f0-42ca-90ad-e2aa46b9e5ea",
+            "id": "16",
+            "name": "Code Search",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.useblackbox.io/home-codesearch"
+         }, {
+            "date_added": "13328296765921012",
+            "date_last_used": "13354361578565077",
+            "guid": "93664ef0-939e-4339-8a0d-7e13aa6541ab",
+            "id": "17",
+            "name": "Free AI Voiceover Generator | Speechify",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://speechify.com/voiceover/?landing_url=https%3A%2F%2Fspeechify.com%2Fvoiceover%2F"
+         }, {
+            "date_added": "13331847728502281",
+            "date_last_used": "0",
+            "guid": "80519768-0aa3-42ce-88ee-a0d623563f99",
+            "id": "18",
+            "name": "Bard",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://bard.google.com/u/1/"
+         }, {
+            "date_added": "13337156985709349",
+            "date_last_used": "0",
+            "guid": "47a5c2df-71a0-45f3-858f-cb7195d32a0b",
+            "id": "19",
+            "name": "Elicit And 9 Other AI Tools For Academic research",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://theresanaiforthat.com/ai/elicit/"
+         }, {
+            "date_added": "13337156988940872",
+            "date_last_used": "0",
+            "guid": "eded629c-fc50-4340-bdf3-116145c3b620",
+            "id": "20",
+            "name": "scite: see how research has been cited",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://scite.ai/"
+         }, {
+            "date_added": "13337156993588834",
+            "date_last_used": "0",
+            "guid": "09c871ef-b9b3-4413-b462-99b094969787",
+            "id": "21",
+            "name": "Trinka — World’s Premier Academic & Technical Writing Assistant is Here!",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.enago.com/news/ai-writing-assistant"
+         }, {
+            "date_added": "13337157000724679",
+            "date_last_used": "0",
+            "guid": "917c2a2c-809b-4cdd-b242-10fb17b60588",
+            "id": "22",
+            "name": "Semantic Scholar- A Research Tool for Academic and Scientific Literature - Educators Technology",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.educatorstechnology.com/2022/09/semantic-scholar-research-tool-for.html"
+         }, {
+            "date_added": "13337157130213192",
+            "date_last_used": "0",
+            "guid": "0fb8f709-c7c0-4d2d-a10a-4d6cba01d7c0",
+            "id": "23",
+            "name": "Welcome to WorldCat.org | WorldCat.org",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.worldcat.org/topics/welcome"
+         }, {
+            "date_added": "13337196839380908",
+            "date_last_used": "0",
+            "guid": "194cb07e-6101-4991-b315-58d82c347c2f",
+            "id": "24",
+            "name": "Blackbox AI Code Chat",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.useblackbox.io/chat"
+         }, {
+            "date_added": "13337320826355451",
+            "date_last_used": "0",
+            "guid": "8b641f28-1110-46ad-a54b-b9c72362aa42",
+            "id": "25",
+            "name": "Turnitin",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.turnitin.com/login_page.asp?lang=und&err=3302"
+         }, {
+            "date_added": "13337417094249458",
+            "date_last_used": "0",
+            "guid": "6a9699bb-30b2-4fd5-9a6a-6d66d068f878",
+            "id": "26",
+            "name": "Untitled document - Google Docs",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://docs.google.com/document/d/1gO49pFMQcF5yr3jwP0fD-tNeYIRXKOSYxCirOzmyaw4/edit"
+         }, {
+            "date_added": "13338480400647856",
+            "date_last_used": "13341411238485217",
+            "guid": "6b4a8840-1c5d-4eaa-8779-d81b7529c5d2",
+            "id": "27",
+            "name": "(PC-MRC) DES - ALIC - ALBERT.docx - Microsoft Word Online",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://onedrive.live.com/edit.aspx?resid=649E5D9BD7397696!53376&ithint=file%2cdocx&ct=1694004747487&wdOrigin=OFFICECOM-WEB.MAIN.EDGEWORTH&wdPreviousSessionSrc=HarmonyWeb&wdPreviousSession=fa1b1fa8-5a65-4156-bcb1-490406989a1d"
+         }, {
+            "date_added": "13338626059521560",
+            "date_last_used": "0",
+            "guid": "3581c3fe-def3-4ab8-99e5-32ddc0b62c77",
+            "id": "28",
+            "name": "dis",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://widodo.staff.uns.ac.id/2009/03/05/advantages-and-disadvantages-of-the-difference-physical-forms-of-the-library-catalogue/"
+         }, {
+            "date_added": "13341831080839740",
+            "date_last_used": "0",
+            "guid": "af6006f7-d3de-4075-891d-3039b714edd2",
+            "id": "29",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "My files - OneDrive",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://onedrive.live.com/?id=root&cid=649E5D9BD7397696"
+         }, {
+            "date_added": "13341944135607836",
+            "date_last_used": "0",
+            "guid": "103ee2f2-d660-48a0-a033-a6d921d1b0be",
+            "id": "30",
+            "name": "Free Source Code Projects and Tutorials - sourcecodester.com",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.sourcecodester.com/"
+         }, {
+            "date_added": "13342033750173410",
+            "date_last_used": "0",
+            "guid": "dd831765-00aa-43e1-a1ba-df24585c3c98",
+            "id": "31",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Vienna Museum of Science and Technology",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.technischesmuseum.at/language/en-us/home"
+         }, {
+            "date_added": "13342117178740425",
+            "date_last_used": "0",
+            "guid": "33f54d71-8089-4137-b98e-70f65d6b52e8",
+            "id": "32",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "diagr",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://classroom.google.com/u/1/w/NjE4NDE3MzU3NTQx/t/all"
+         }, {
+            "date_added": "13342535018478627",
+            "date_last_used": "0",
+            "guid": "96085dc3-179c-4f15-8502-751db76dbc2c",
+            "id": "33",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "(PC-MRC) DES - ALIC - ALBERT.docx - Microsoft Word Online",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://onedrive.live.com/edit.aspx?resid=649E5D9BD7397696!53376&cid=649e5d9bd7397696&CT=1698061413057&OR=ItemsView"
+         }, {
+            "date_added": "13342535054285937",
+            "date_last_used": "0",
+            "guid": "38326212-12da-4283-92ad-cb51f194f0c8",
+            "id": "34",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "(PC-MRC) FINAL.docx - Microsoft Word Online",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://onedrive.live.com/edit.aspx?resid=649E5D9BD7397696!53409&cid=649e5d9bd7397696&CT=1698061428808&OR=ItemsView"
+         }, {
+            "children": [  ],
+            "date_added": "13343162375705285",
+            "date_last_used": "0",
+            "date_modified": "13343162375705285",
+            "guid": "3aa27921-aba5-42d1-8f19-6294f764e809",
+            "id": "35",
+            "name": "New folder",
+            "source": "unknown",
+            "type": "folder"
+         }, {
+            "date_added": "13343162386874229",
+            "date_last_used": "0",
+            "guid": "2078f150-5f0e-47bc-8096-5eba20e55f3b",
+            "id": "36",
+            "name": "Upload Image – remove.bg",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.remove.bg/upload?full_image_id=0a7833bf-6354-4cc2-8a0c-aeb7fec2e18f"
+         }, {
+            "date_added": "13344443146103156",
+            "date_last_used": "0",
+            "guid": "d136654d-da46-43f4-a10b-b1e84cffc84e",
+            "id": "37",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Blackbox AI Code Chat",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.blackbox.ai/?userId=640ac4f3220fc10033bc528f"
+         }, {
+            "date_added": "13346143999748736",
+            "date_last_used": "0",
+            "guid": "17ebf482-80bd-4818-9c4a-feb737026d07",
+            "id": "38",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "EdrawMax",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.edrawmax.com/online/app.html?bY2xDsIwDES/JitKAhRmqCJ1QR3Yq9C4JciJqzQV9O9xJBALk+175zu6PcS2fs76II96VynVmf3dt0KbFtJM0SKvp8Wj83EUWp4pAY8WbdyAcy+hq2gDcMZ/E/MeKUJTs0XJSrIweIRupiX15Q/ClFfDEpPMB9oMXV6nwiJdPwpD5+2YbPgyg0Tp1zIkCpcFsdS8AQ=="
+         }, {
+            "date_added": "13346779910260065",
+            "date_last_used": "0",
+            "guid": "d6f0f5e3-8e3d-441a-a19e-dde5ad0f0db0",
+            "id": "39",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Day Light by Sunny Fruit Album | Artlist",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://artlist.io/royalty-free-music/album/day-light/9312"
+         }, {
+            "date_added": "13352455967138567",
+            "date_last_used": "0",
+            "guid": "82c2c32f-fea6-4c4f-9908-fd68d1764dc5",
+            "id": "40",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "CONSULT",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://dochub.com/2022-cete-luzuriagaai/Xv7zYW5RnlzZxZpV2A9egx/cete-consultation-form-pdf"
+         }, {
+            "date_added": "13352652823878398",
+            "date_last_used": "0",
+            "guid": "b85ef90b-c390-49bf-9803-ea7f43705a08",
+            "id": "41",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "(CST1) THESIS DES-JE-AL.docx - Microsoft Word Online",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://onedrive.live.com/edit?id=649E5D9BD7397696!53448&resid=649E5D9BD7397696!53448&ithint=file%2cdocx&ct=1708179215191&wdOrigin=OFFICECOM-WEB.START.EDGEWORTH&wdPreviousSessionSrc=HarmonyWeb&wdPreviousSession=2d4e98cc-6d7f-4934-b16b-9498b947993c&wdo=2&cid=649e5d9bd7397696"
+         }, {
+            "date_added": "13352706138938916",
+            "date_last_used": "0",
+            "guid": "daa1d6ec-e4fd-4979-b663-00c92f727b04",
+            "id": "42",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "New tab",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "edge://newtab/"
+         }, {
+            "date_added": "13352752241704482",
+            "date_last_used": "0",
+            "guid": "7be25d88-2aac-43a8-88d4-ed48fe904bf8",
+            "id": "43",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "en",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://www.hindawi.com/journals/scn/2022/4927239/"
+         }, {
+            "date_added": "13352835253121647",
+            "date_last_used": "0",
+            "guid": "0d6e59b7-7fd6-4708-97be-50cfa421a1e8",
+            "id": "44",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "aes",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://scholar.google.com/citations?user=D3Iuo0UAAAAJ"
+         }, {
+            "date_added": "13353092903662106",
+            "date_last_used": "0",
+            "guid": "1421416f-da5a-49a2-9c79-b2792797eb2e",
+            "id": "45",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "CONSULTATION FORM.pdf | DocHub",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://dochub.com/2022-cete-luzuriagaai/Xv7zYW5RnlzZxZpV2A9egx/cete-consultation-form-pdf?gdiExists=1wjAg6mfjHnL6gCaOhR0YNStp7m0rbwln"
+         }, {
+            "date_added": "13353669285571661",
+            "date_last_used": "0",
+            "guid": "f4d10a49-af34-4680-8ea7-fe789d5eb8bd",
+            "id": "46",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "(PC-MRC) FINAL.pdf",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "file:///C:/Users/Albert%20Luzuriaga/OneDrive/Desktop/(PC-CST1)%20Thesis/(PC-MRC)%20FINAL.pdf"
+         }, {
+            "date_added": "13353787667779233",
+            "date_last_used": "0",
+            "guid": "5ebe280e-651d-4985-8425-cbfe9e2a6e54",
+            "id": "47",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "(PC-CST1) AES ALGORITHM.docx - Microsoft Word Online",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://onedrive.live.com/edit.aspx?resid=649E5D9BD7397696!53471&cid=649e5d9bd7397696&CT=1709313680365&OR=ItemsView"
+         }, {
+            "date_added": "13362697022517023",
+            "date_last_used": "0",
+            "guid": "fc71af4e-b91f-4f04-85e8-2f2424956405",
+            "id": "9",
+            "name": "ASUS Software Portal - Exclusive technology",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://www.asus.com/Software-and-Innovations-Portal/"
+         }, {
+            "date_added": "13362697022516931",
+            "date_last_used": "0",
+            "guid": "615356f8-e414-49dc-af67-f06162247371",
+            "id": "8",
+            "name": "MyASUS Software - Get the best from ASUS PC",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://www.asus.com/ASUS-Software/"
+         }, {
+            "date_added": "13362697022515894",
+            "date_last_used": "0",
+            "guid": "785e110a-3169-4ba9-be5b-b50ba9b43285",
+            "id": "7",
+            "name": "McAfee LiveSafe",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://home.mcafee.com/root/campaign.aspx?cid=247829"
+         } ],
+         "date_added": "13362697022301095",
+         "date_last_used": "0",
+         "date_modified": "13362733550576122",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Favorites bar",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13362697022301097",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other favorites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13362697022301099",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile favorites",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CkEKHgiIgQISCGCuRRCQAQAAKg4QABgAIDgoBDAAOABAABIAKhhHY3dtRURwbXlDMUE5Sm4zVDRicUVnPT1IA6AGDBKrAQgtEqYBChxoZGxUYXZ6cDBKSTBrby9VY0lCWkcyS055eE09EiQxNDIxNDE2Zi1kYTVhLTQ5YTItOWM3OS1iMjc5Mjc5N2ViMmUYACACKAIw+JyagoEyOJCilo3dMUDruZmCgTJKHGZ0WjIrOU9ZR0ljYnludW82Zm1pd0VyTmR3ND1aIiIg////9FhFVExrUHBYRzNvMXhvalBlU2ZaYzJRQ3c5QT1lXcGc4BKrAQgsEqYBChxwUGhhcEV4d3A1aUkyWVhUVHdhTzFUOWNjL3M9EiQwZDZlNTliNy03ZmQ2LTQ3MDgtOTdiZS01MGNmYTQyMWExZTgYACACKAIw75yagoEyOKHfqJLcMUDruZmCgTJKHDl6TWZUWWh0ejZzRXVEM2wxaU4zWUJOUGlxMD1aIiIg////6E9oSVNpa3ZHekdoR0R4YkxOajN1YzQyWWluOD1lBnJSqBKrAQgrEqYBChxkNUFKT09NdjFZYUczVG5kYStDSzV4Q1V4OHM9EiQ3YmUyNWQ4OC0yYWFjLTQzYTgtODhkNC1lZDQ4ZmU5MDRiZjgYACACKAIw8pyagoEyOIGH3urbMUDruZmCgTJKHHRQRnZXVjdrWXNMMENUWFZBS2pwQUFXeHlBMD1aIiIg////0TZUc2dNQm5qQStlNTB2MkRTM1N2TlRCaGhoND1lMSxuUhKrAQgqEqYBChxzeGpib0pCdTg5ZFNub2NXSHVHa3hMaFNTbmc9EiRkYWExZDZlYy1lNGZkLTQ5NzktYjY2My0wMGM5MmY3MjdiMDQYACAAKAAw6o/g1NsxOOaT4NTbMUDmk+DU2zFKHHVKc2dsUGxnYzI2NkhGUk9YSm1iRmNNV2NRRT1aIiIg////oytjWEpSb1h4dmFwYmlFcXg0NThVcFhRR1pKUT1l2K+wAhKqAQgpEqUBChxWRVZWTE9SWldpaEtpbEtRcStPZGNKbmtjbW89EiRiODVlZjkwYi1jMzkwLTQ5YmYtOTgwMy1lYTdmNDM3MDVhMDgYACACKAIw8JyagoEyONmDqrvbMUDruZmCgTJKHENaOXpyMXVxSFJVV1YzcnJBUjlNSHZVbFM4WT1aISIf////RkJjNHNaaE43WjRwd3lOVXhRRnVjbW1Qd3RNPWXBy6XKEqoBCCgSpQEKHDByRnpDdWdvOEkxL1VzdHRKd3FYYmpUeXBxVT0SJDgyYzJjMzJmLWZlYTYtNGM0Zi05OTA4LWZkNjhkMTc2NGRjNRgAIAIoAjDsnJqCgTI48Oi63doxQOq5mYKBMkocMVhxUHhnZW01Y0pLMi9CeWNTa1d5RDhOSTJNPVohIh////5TdnpKMlFGdHJuaW4wNFdrQkd4SjZaSy9SWVE9ZV3BnOASqgEIJhKlAQocMzlJa1pxRWppS0d0NzYranBGWlFJbTFjSXhFPRIkMTdlYmY0ODItODBiZC00ODE4LTljNGEtZmViNzM3MDI2ZDA3GAAgAigCMOCcmoKBMji39dabwzFA6rmZgoEyShxYSVVJSGNOUXJjN1NuK1B2VTYxSjBVcGZ6aWM9WiEiH///+nZvVWF6cVhvTmVCVm9ZTk1YRm1iTHlXa2crUT1lhbWdnBKrAQguEqYBChxwNDdtWCtnanNrNEIzeW9Ib2NkK3ozQVpPZmM9EiRmNGQxMGE0OS1hZjM0LTQ2ODAtOGVhNy1mZTc4OWQ1ZWI4YmQYACAAKAAwrIeCoN8xOM2LgqDfMUDNi4Kg3zFKHFplb3ZTSHlZaTRob3hYVy9IRkZBenk1c0hQYz1aIiIg////+kZpM216bmt2MnpOcjE5NWR2bjhmVlllS2VuVT1ld3BsoxKqAQglEqUBChw3V3ZOQjJjS3VtUTFYVlY3RWJzK2NYOVQrMWs9EiRkMTM2NjU0ZC1kYTQ2LTQzZjQtYTEwYi1iMWU4NGNmZmM4NGUYACACKAIw6ZyagoEyOIeR0/C8MUDquZmCgTJKHDFzV3VlU3IyM3g2U0toenBLKzAyOVhnVmx2OD1aISIf///1Y2c1ZytTMzhCeTZ5VjR1OGlxODQ4c2tjQjhBPWUhsmGYEqoBCCQSpQEKHGdjZ0JvdzFqK3JlM0xCaGJCT1pqK1Z6VUxuaz0SJDIwNzhmMTUwLTVmMGUtNDdiYy04MDk2LTVlYmEyMGU1NWYzYhgAIAIoAjDrnJqCgTI4iNX3jbgxQOq5mYKBMkocRUJXNktNMzVEcTE1WTM4bzVpRm9tTFRkcWQwPVohIh///+pvem4vZXhpUVhLNXgrb21zQXpFR2RoMGJKTzQ9ZYWdjfgSqgEIIxKlAQocdDliaW5KeEJqVkRBd0NCa3ZBdmdON2d6ZnhJPRIkM2FhMjc5MjEtYWJhNS00MmQxLThmMTktNjI5NGY3NjRlODA5GAAgACgAMMP59o24MTj5gPeNuDFA+YD3jbgxShwrZENMbVJzZ1RxeTNZUEdSeEtuZjQvdjByVnM9WiEiH///1FdBWi9ZWHpIMEIyY01jRlFoRXZKTWFPWW8zOD1lAAAAABKrAQgvEqYBChxiM2trVW1BRUVtWUd6QzY0MTQ1bnAxMlB1WnM9EiQ1ZWJlMjgwZS02NTFkLTQ5ODUtODQyNS1jYmZlOWUyYTZlNTQYACACKAIw95yagoEyOP2qu9jfMUDruZmCgTJKHGo5MHo1UE8rMmg5SkMrRi80ZFZpNWdPdjFJVT1aIiIg/////UI5akNnMzlZam1BelZQc01KclBxZVZRZzMvcz1lwculyhKqAQgnEqUBChx5TUFpWUQvN0NPMFdPTU1TSi9jUlNrTzhxY2s9EiRkNmYwZjVlMy04ZTNkLTQ0MWEtYTE5ZS1kZGU1YWQwZjBkYjAYACACKAIw55yagoEyOJTr88rFMUDquZmCgTJKHG9DemQ3azBLdW1EZnppVXMxNTZFakNjVVFJST1aISIf///9cU5XbUxubFhPeVRyQ2ZEQjl1d3FONi85bkEwPWV2sVefEqgBCBMSowEKHGRDL1dJd1ZQSzRTYXFmYmE3cUYwUW1zcjBhTT0SJDQ3YTVjMmRmLTcxYTAtNDVmMy04NThmLWNiNzE5NWQzMmEwYhgAIAIoAjDunJqCgTI4o5Gr3qExQOa5mYKBMkocMEwrMFRkRGs2VjlXSkpGQXlxL2xlNlhQdDAwPVofIh37U1Y2YnRmbjBMUS9pa05TSWpnZ3U2SkVvcG5jPWUsdM+vEqkBCCESpAEKHHVhM0c2Qy9kc0V3UHNUNlRGNzNiSW9EUEc5cz0SJDk2MDg1ZGMzLTE3OWMtNGYxNS04NTAyLTc1MWRiNzZkYmMyYxgAIAIoAjDtnJqCgTI41+Pk4rUxQOm5mYKBMkocTHlacUFhdTgvWTF2ZE1qMmVkdE9zazFsUEdZPVogIh7//1JiYUlPcjhPZDJDY0tBSm1SZ0t4SVpwdUs2Yz1lwculyhKpAQgaEqQBChx0VDlkZWVYQVl0azd3Nlgxc3BRNG1CM1RhUzQ9EiQ2YTk2OTliYi0zMGIyLTRmZDUtOWE2YS02ZDY2ZDA2OGY4NzgYACACKAIw4ZyagoEyOOPprtqiMUDouZmCgTJKHEFnRjF1MGhuVHoyYi80TWo5eXdnVG5odjdFWT1aICIe/95ua0NwdncwVytOVll0UEVSNEN0aHNVQzZwOUE9ZdVHTTQSiQEIAxKEAQocbmpnRHU4OGVDcnZYcDg2cEQ3ZkhHY3FGcDg4PRIkMTI4YTg0M2MtYTU4NC01NjMzLTg4MDYtZGVhYWQ4NjFlNzBkGAAgACgAMIe76NHlMDjZvujR5TBA2b7o0eUwShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAABKJAQgBEoQBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9EiQ4MjcyNzZlMy0wYTM3LTU4NTQtYWE4NC00M2E5OWNmYjU3ZGMYACAAKAAwh7vo0eUwONy96NHlMEDcvejR5TBKHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAEqkBCB0SpAEKHElNb21iVUJoaG9EV2pYakZHZXByS0JLcHhlYz0SJGFmNjAwNmY3LWQzZGUtNDA3NS04OTFkLTMwMzliNzE0ZWRkMhgAIAIoAjDqnJqCgTI4h56Pk7MxQOm5mYKBMkocM2FvYkNMRmZaWUVWNXhKMi8vbXVTOEw0cU93PVogIh7/+zhnN3NuWDB5RVlKRGxuRE4xVWhVV1FjaDZpaz1lm1ulJxKpAQgfEqQBChxqYlI0ODF0cWJZWXQybmRrNi81U2tTWTlmV009EiRkZDgzMTc2NS0wMGFhLTQzZTEtYTFiYS1kZjI0NTg1YzNjOTgYACAAKAAw6o7h87MxONqR4fOzMUDakeHzszFKHGJHRWZtOG5lU1ZpWkhCd3hVTStWZmp1YWxRdz1aICIe//5JR3NRN1lScWVMZ0V4RFl6ZEl1NGg1T0t6NTQ9ZQAAAAASqAEIGBKjAQocNGUrNm8wSnhiS3RveFc4Y1k5U1NWMW1TZGNrPRIkMTk0Y2IwN2UtNjEwMS00OTkxLWIzMTUtNThkODJjMzQ3YzJmGAAgAigCMOicmoKBMjj306vxoTFA57mZgoEyShw2VUFWcnBFbmc1V05uWCs5aFd0SGp6Z3JEOXc9Wh8iHf9PKzBtS1NENS84V1NiSWpGQUcxVGRiTHNYaWc9ZSGyYZgSqgEIIhKlAQocQ1Bnb1hxOWxhSmd3ZFNDUXRJL00yS0V0Sk5ZPRIkMzgzMjYyMTItMTJkYS00MjgzLTkyYWQtY2I1MWYxOTRmMGM4GAAgAigCMOScmoKBMjjH0ubitTFA6bmZgoEyShxBc1ZWVVArRFBZM09yOXFTQ1pGanFrbmRUWnM9WiEiH///qS9RazR5Q2RqcjUxMEJDdFFXT1hTQmlsNnpMaz1lwculyhKpAQgbEqQBChxjZjFubDVPc2RYdEthRkpibTlpUEdRWXpGams9EiQ2YjRhODg0MC0xYzVkLTRlYWEtODc3OS1kODFiNzUyOWM1ZDIYACACKAIw9ZyagoEyOL6LstWmMUDouZmCgTJKHGFOalZQZjdFNFJuTHZEZVYray9sMG1sa2gyQT1aICIe/+9OU1JDWVU5YmE1NmErMXFsTXNRdUZ2dUR2WWM9Zacc0hkSqAEIFRKjAQocY2RieHNvdjRRWkVwSnU3M3E0L1Y3emRDUU1JPRIkMDljODcxZWYtYjliMy00NDEzLWI0NjItOTliMDk0OTY5Nzg3GAAgAigCMPScmoKBMjjLzqveoTFA5rmZgoEyShxOU2RnUHBySXdLSmpRUTc0VGxtZHVTUHBBTVE9Wh8iHf5lRjJ6eE1FZGpReTRHVHgybk9ZMFJSY1NEMkU9Zb7a63QSqAEIFxKjAQocOGJrTEZCSEVrVVFsN1hzS1M1RGRhUC9CZk9FPRIkMGZiOGY3MDktYzdjMC00ZDJkLWExMGEtNGQ2Y2JhMDFkN2MwGAAgAigCMOacmoKBMji0/LPeoTFA57mZgoEyShwySHJmdmJsT29OZTluK3FuUlBEZ24wZDBjdjg9Wh8iHf9DajdzSVI5UTAyT2h5M1YvUC9MUlJmQ3RiMHM9ZQpd7EASqAEIGRKjAQocdnMrY25WclhrMzFSbGpBdVNCMUtoZ2FEZDgwPRIkOGI2NDFmMjgtMTExMC00NmFkLWE1NGItYjljNzIzNjJhYTQyGAAgAigCMOWcmoKBMjj+jrusojFA6LmZgoEyShxPV09VWFFWTFp0Y1lFWTMvaWE0eHZzcFdwcUk9Wh8iHf94NEl5c1ZTMW9NS2RqaCs4ZUNuOFpuTTNQems9Zc7spF8SqAEIFhKjAQocdFVVQUQxVitnK1BTLzk3QVVRSkx3YlNTd0tvPRIkOTE3YzJhMmMtODA5Yi00Y2RkLWIyNDItMTBmYjE3YjYwNTg4GAAgAigCMOKcmoKBMjj/hazeoTFA57mZgoEyShxYcmZ4ZFNvZmVxQjlReUkvVitReWl1Z3BORzQ9Wh8iHf9COUtVc1o4YU5QM252SkZITTk1R1dRblNJeVU9Zf1vhO4SpwEIEBKiAQocNUt2b1c3U1p1YjFvdWpDRnY1V0Y5UlJvQjFZPRIkZjE2M2IwNWQtNzVmMC00MmNhLTkwYWQtZTJhYTQ2YjllNWVhGAAgAigCMOOcmoKBMjit2dnT7DBA5bmZgoEyShw1Tk4xMnlpYUdkcW1aaklVQ3pnUUpSMWFxQ2c9Wh4iHGp6UHo2QmU1NFlPUWRiWmJhOUVmcnlLQlJHST1lsCvMYBKoAQgUEqMBChxKMVpqRTBvMlN4cEU0dTY3YnpRLzZFOG5mQlU9EiRlZGVkNjI5Yy1mYzUwLTQzNDAtYmRmMy0xMTYxNDVjM2I2MjAYACACKAIw8ZyagoEyOLOsq96hMUDmuZmCgTJKHDRDMEtWcHh1Wnd5a05MYklCY2hrUzZ6cVN1RT1aHyId/VJOMGpDWVNhanRETHVUdFlkZzkvbE8xTFN4VT1l4ag5YhKJAQgCEoQBChxZY1NUb252RVNQd3FDczRMMmNyVmh2NjhMOTg9EiRjOWIwYTU4MS1kMDQxLTUwZTYtOGYxOC1kYzA3ZWU4ZjBlNmEYACAAKAAwh7vo0eUwOOy96NHlMEDsvejR5TBKHG9QVmtod0JSYlY2NUtDV1IyK0lPTkhXb091OD1aAGUAAAAAEqkBCBwSpAEKHDRvbmk0YXdUckJ4bWh2K1IxQXM4MVh4Y0J1VT0SJDM1ODFjM2ZlLWRlZjMtNGFiOC05OWU1LTMyZGRjMGI2MmM3NxgAIAIoAjDfnJqCgTI4wLfsmqcxQOi5mYKBMkocd3lXMjVEV3FJNFVnQ2d4UjRkQy9FTnAxYWtRPVogIh7/91d5SGkzRHNSYlFWMUVwTWlHNFd4WXJUb2tPTT1le/HIKhKoAQgREqMBChxJUVppZWliWXhhWGFHNm9IaGFoaDZNTFpxUms9EiQ5MzY2NGVmMC05MzllLTQzMzktOGEwZC03ZTEzYWE2NTQxYWIYACACKAIw3pyagoEyOO2fut2AMUDluZmCgTJKHE5uK0tyUWp6aUZSNE5XN3BOYnB1d1ZOajd5VT1aHyId2k5wSjZHNWFkTlpYRDcySWphMlhGZTBITFdkWT1l07/BqBKpAQgeEqQBChxhakhVSDY2dG5wVy9JMG9KSEtsSUpTblBRSzg9EiQxMDNlZTJmMi1kNjYwLTQ4YTAtYTAzMy1hNmQ5MjFkMWIwYmUYACACKAIw85yagoEyOKHMg8mzMUDpuZmCgTJKHCtaOUJ6OFdUY3J0bUpnMTdTdlRjako4ZUhWZz1aICIe//05ZU9GMm55OVpYR0NTYWVRMis1cnhkb0kwM2c9ZX1xOCUSqAEIEhKjAQocM2JjZmJJc1c5TmZsWTJTT0RLNFppVU9LdjBBPRIkODA1MTk3NjgtMGFhMy00MmNlLTg4ZWUtYTBkNjIzNTYzZjk5GAAgAigCMPacmoKBMjiJ3tf6jTFA5rmZgoEyShxzbDZ1VERhdXIxU21CdUw3a2JXcVBzRzc2VGM9Wh8iHe1haVU5M2F3QzJET2c2b1FiRk43bmx5b1Bic1E9ZQtkJg0SqQEIIBKkAQocQ2p3L2djZFpHN3pVdm02amR6a1dESWxURlcwPRIkMzNmNTRkNzEtODA4OS00MTM3LWI5OGUtNzBmNjVkNmI1MmU4GAAgAigCMN2cmoKBMjjDqcWbtDFA6bmZgoEyShxUUk4zRG4yMElvbmdyVEY4azFHLzVjbWFqNHM9WiAiHv//QWp0UGxEQ2hJcDNNVkJhQUI5NWVCUWtSV3h3PWVy4ncKMAA4AA==",
+   "version": 1
+}
