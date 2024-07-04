@@ -1,6 +1,8 @@
+// home_page.dart
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart'; // Import SharedPreferences class
 import 'login_page.dart';  // Make sure you have this import for LoginPage
+import 'scanner_page.dart'; // Import ScannerPage
 
 class HomePage extends StatelessWidget {
   @override
@@ -38,12 +40,10 @@ class HomePage extends StatelessWidget {
               ),
               child: Text('Scan QR Code'),
               onPressed: () async {
-                // Add QR code scanning functionality here
-                // For example, using the `mobile_scanner` package
-                //final qrCode = await MobileScanner.scan();
-
-                // Handle the scanned QR code
-                //print('Scanned QR code: $qrCode');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ScannerPage()),
+                );
               },
             ),
             SizedBox(height: 20),
