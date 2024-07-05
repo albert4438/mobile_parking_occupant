@@ -92,10 +92,22 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "flutter_barcode_scanner",
+      "rootUri": "file:///C:/Users/Albert%20Luzuriaga/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_barcode_scanner-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_lints",
       "rootUri": "file:///C:/Users/Albert%20Luzuriaga/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_lints-2.0.3",
       "packageUri": "lib/",
       "languageVersion": "2.19"
+    },
+    {
+      "name": "flutter_plugin_android_lifecycle",
+      "rootUri": "file:///C:/Users/Albert%20Luzuriaga/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.18",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
     },
     {
       "name": "flutter_test",
@@ -192,12 +204,6 @@
       "rootUri": "file:///C:/Users/Albert%20Luzuriaga/AppData/Local/Pub/Cache/hosted/pub.dev/pointycastle-3.8.0",
       "packageUri": "lib/",
       "languageVersion": "3.0"
-    },
-    {
-      "name": "qr_code_scanner",
-      "rootUri": "file:///C:/Users/Albert%20Luzuriaga/AppData/Local/Pub/Cache/hosted/pub.dev/qr_code_scanner-0.4.0",
-      "packageUri": "lib/",
-      "languageVersion": "2.12"
     },
     {
       "name": "shared_preferences",
@@ -320,7 +326,7 @@
       "languageVersion": "3.1"
     }
   ],
-  "generated": "2024-07-04T20:58:01.975092Z",
+  "generated": "2024-07-05T13:29:13.926689Z",
   "generator": "pub",
   "generatorVersion": "3.1.3"
 }

@@ -1,10 +1,16 @@
-// home_page.dart
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart'; // Import SharedPreferences class
-import 'login_page.dart';  // Make sure you have this import for LoginPage
-import 'scanner_page.dart'; // Import ScannerPage
+import 'package:shared_preferences/shared_preferences.dart'; 
+import 'login_page.dart';  
+import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart'; 
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  String _scanResult = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,25 +39,50 @@ class HomePage extends StatelessWidget {
             // QR Code Scanning Button
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                primary: Colors.blue, // Primary color
-                onPrimary: Colors.white, // Text color
-                elevation: 5, // Elevation
-                padding: EdgeInsets.all(16), // Padding
+                primary: Colors.blue, 
+                onPrimary: Colors.white, 
+                elevation: 5, 
+                padding: EdgeInsets.all(16), 
               ),
               child: Text('Scan QR Code'),
               onPressed: () async {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ScannerPage()),
+                String scanResult = await FlutterBarcodeScanner.scanBarcode(
+                  '#ff6666', 
+                  'Cancel', 
+                  true, 
+                  ScanMode.QR
                 );
+
+                if (scanResult != '-1') {
+                  setState(() {
+                    _scanResult = scanResult;
+                  });
+
+                  // Display the scan result
+                  showDialog(
+                    context: context,
+                    builder: (context) => AlertDialog(
+                      title: Text('Scan Result'),
+                      content: Text(_scanResult),
+                      actions: [
+                        ElevatedButton(
+                          child: Text('OK'),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                        ),
+                      ],
+                    ),
+                  );
+                }
               },
             ),
             SizedBox(height: 20),
             // Parking Log Button
             OutlinedButton(
               style: OutlinedButton.styleFrom(
-                side: BorderSide(color: Colors.grey), // Border color
-                padding: EdgeInsets.all(16), // Padding
+                side: BorderSide(color: Colors.grey), 
+                padding: EdgeInsets.all(16), 
               ),
               child: Text('View Parking Log'),
               onPressed: () {
@@ -79,7 +110,7 @@ class ParkingLogScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: ListView.builder(
-        itemCount: 10, // Replace with your parking log data
+        itemCount: 10, 
         itemBuilder: (context, index) {
           return ListTile(
             title: Text('Parking Log Entry $index'),
@@ -102,6 +133,6 @@ class Shared {
 
   static Future<bool> getUserSharedPreferences() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
-    return preferences.getBool(loginSharedPreference) ?? false;
+    return preferences.getBool(loginSharedPreference)?? false;
   }
 }

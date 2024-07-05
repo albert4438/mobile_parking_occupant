@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:qr_code_scanner/qr_code_scanner.dart';
-import 'dart:convert';
-import 'package:encrypt/encrypt.dart';  // Use encrypt package
-import 'dart:io';  // Import for Platform
+import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 class ScannerPage extends StatefulWidget {
   @override
@@ -10,75 +7,43 @@ class ScannerPage extends StatefulWidget {
 }
 
 class _ScannerPageState extends State<ScannerPage> {
-  final GlobalKey qrKey = GlobalKey(debugLabel: 'QR');
-  QRViewController? controller;
-  String decryptedData = '';
-
-  @override
-  void reassemble() {
-    super.reassemble();
-    if (Platform.isAndroid) {
-      controller?.pauseCamera();
-    } else if (Platform.isIOS) {
-      controller?.resumeCamera();
-    }
-  }
+  String _scanResult = '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('QR Scanner'),
+        title: Text('QR Code Scanner'),
         centerTitle: true,
       ),
-      body: Column(
-        children: <Widget>[
-          Expanded(
-            flex: 5,
-            child: QRView(
-              key: qrKey,
-              onQRViewCreated: _onQRViewCreated,
-              overlay: QrScannerOverlayShape(
-                borderColor: Colors.red,
-                borderRadius: 10,
-                borderLength: 30,
-                borderWidth: 10,
-                cutOutSize: 300,
-              ),
+      body: Padding(
+        padding: const EdgeInsets.all(24.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text(
+              _scanResult,
+              style: TextStyle(fontSize: 18),
             ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Center(
-              child: Text('Decrypted Data: $decryptedData'),
+            SizedBox(height: 20),
+            ElevatedButton(
+              child: Text('Scan QR Code'),
+              onPressed: () async {
+                String scanResult = await FlutterBarcodeScanner.scanBarcode(
+                  '#ff6666', 
+                  'Cancel', 
+                  true, 
+                  ScanMode.QR
+                );
+
+                setState(() {
+                  _scanResult = scanResult;
+                });
+              },
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
-  }
-
-  void _onQRViewCreated(QRViewController controller) {
-    this.controller = controller;
-    controller.scannedDataStream.listen((scanData) {
-      setState(() {
-        decryptedData = decryptData(scanData.code);
-      });
-    });
-  }
-
-  @override
-  void dispose() {
-    controller?.dispose();
-    super.dispose();
-  }
-
-  String decryptData(String encryptedData) {
-    final key = Key.fromUtf8('your-secret-key'); // Update with your secret key
-    final iv = IV.fromUtf8('16-characters-iv');  // Update with your IV
-
-    final encrypter = Encrypter(AES(key, mode: AESMode.cbc));
-    final decrypted = encrypter.decrypt64(encryptedData, iv: iv);
-    return decrypted;
   }
 }
