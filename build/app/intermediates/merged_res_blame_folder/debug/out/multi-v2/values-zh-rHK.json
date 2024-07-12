@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.flutter_application_1.app-mergeDebugResources-21:/values-zh-rHK/values-zh-rHK.xml",
+            "outputFile": "com.example.flutter_application_1.app-mergeDebugResources-22:/values-zh-rHK/values-zh-rHK.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Albert Luzuriaga\\.gradle\\caches\\transforms-3\\09a71f45a2f110948b735c42a8fac7af\\transformed\\appcompat-1.2.0\\res\\values-zh-rHK\\values-zh-rHK.xml",
