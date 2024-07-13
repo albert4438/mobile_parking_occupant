@@ -5,7 +5,9 @@ import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 import 'package:encrypt/encrypt.dart' as encrypt; // Import with a prefix
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'dart:convert'; // Add this import
-import 'dart:typed_data'; // Add this import
+import 'login_page.dart';
+import '../scan_activity.dart';
+import '../enc-dec.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -15,7 +17,9 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   String _scanResult = '';
   final _storage = FlutterSecureStorage();
+  final String aesKey = '69788269e95b3f1df300f5f346fdfa63'; // Replace with your AES key, dapat dili hardCoded
   late String encryptionKey;
+  String decryptedText = '';
 
   @override
   void initState() {
@@ -32,22 +36,32 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  String decrypt(String encrypted, String encryptionKey) {
-    final encryptionKeyBytes = base64Decode(encryptionKey);
-    if (encryptionKeyBytes.length != 16) {
-      throw ArgumentError('Key length is not 128 bits');
-    }
+  Future<void> _handleScan() async {
+    String qrCodeData = await ScanActivity.scanQrCode(context);
+    if (qrCodeData.isNotEmpty) {
+      setState(() {
+        decryptedText = EncryptionUtil.decryptData(aesKey, qrCodeData);
+      });
 
-    final key = encrypt.Key(encryptionKeyBytes);
-    final iv = encrypt.IV.fromLength(16); // Ensure this matches the IV used during encryption
-    final encrypter = encrypt.Encrypter(encrypt.AES(key, mode: encrypt.AESMode.cbc));
+      // Debugging: Print the decrypted data
+      print('Decrypted Data: $decryptedText');
 
-    try {
-      final decrypted = encrypter.decrypt64(encrypted, iv: iv);
-      return decrypted;
-    } catch (error) {
-      print('Decryption error: $error');
-      return '';
+      // Display the decrypted data
+      showDialog(
+        context: context,
+        builder: (context) => AlertDialog(
+          title: Text('Scan Result'),
+          content: Text(decryptedText.isNotEmpty ? decryptedText : 'Decryption failed or data is empty'),
+          actions: [
+            ElevatedButton(
+              child: Text('OK'),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            ),
+          ],
+        ),
+      );
     }
   }
 
@@ -83,66 +97,7 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.all(16),
               ),
               child: Text('Scan QR Code'),
-              onPressed: () async {
-                String scanResult = await FlutterBarcodeScanner.scanBarcode(
-                  '#ff6666',
-                  'Cancel',
-                  true,
-                  ScanMode.QR,
-                );
-
-                if (scanResult != '-1') {
-                  setState(() {
-                    _scanResult = scanResult;
-                  });
-
-                  // Debugging: Print the scanned QR code data
-                  print('Scanned QR Code: $_scanResult');
-
-                  // Decrypt the scan result
-                  try {
-                    final decryptedData = decrypt(_scanResult, encryptionKey);
-
-                    // Debugging: Print the decrypted data
-                    print('Decrypted Data: $decryptedData');
-
-                    // Display the decrypted data
-                    showDialog(
-                      context: context,
-                      builder: (context) => AlertDialog(
-                        title: Text('Scan Result'),
-                        content: Text(decryptedData.isNotEmpty ? decryptedData : 'Decryption failed or data is empty'),
-                        actions: [
-                          ElevatedButton(
-                            child: Text('OK'),
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                          ),
-                        ],
-                      ),
-                    );
-                  } catch (error) {
-                    // Debugging: Print the error message
-                    print('Decryption error: $error');
-                    showDialog(
-                      context: context,
-                      builder: (context) => AlertDialog(
-                        title: Text('Error'),
-                        content: Text('Failed to decrypt data. Please ensure the QR code is valid and the encryption key is correct.'),
-                        actions: [
-                          ElevatedButton(
-                            child: Text('OK'),
-                            onPressed: () {
-                              Navigator.pop(context);
-                            },
-                          ),
-                        ],
-                      ),
-                    );
-                  }
-                }
-              },
+              onPressed: _handleScan,
             ),
             SizedBox(height: 20),
             OutlinedButton(
