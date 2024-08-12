@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'login_page.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
-import 'package:encrypt/encrypt.dart' as encrypt; // Import with a prefix
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
-import 'dart:convert'; // Add this import
-import 'login_page.dart';
+import 'dart:convert';
+import 'package:http/http.dart' as http;
 import '../scan_activity.dart';
 import '../enc-dec.dart';
+import '../parkinglogrecord.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -16,10 +16,11 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   String _scanResult = '';
-  final _storage = FlutterSecureStorage();
-  final String aesKey = '69788269e95b3f1df300f5f346fdfa63'; // Replace with your AES key, dapat dili hardCoded
+  final _storage = const FlutterSecureStorage();
+  final String aesKey = '69788269e95b3f1df300f5f346fdfa63'; // Replace with your AES key
   late String encryptionKey;
   String decryptedText = '';
+  Map<String, dynamic>? occupantVehicleInfo;
 
   @override
   void initState() {
@@ -43,37 +44,191 @@ class _HomePageState extends State<HomePage> {
         decryptedText = EncryptionUtil.decryptData(aesKey, qrCodeData);
       });
 
-      // Debugging: Print the decrypted data
       print('Decrypted Data: $decryptedText');
 
-      // Display the decrypted data
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(
-          title: Text('Scan Result'),
-          content: Text(decryptedText.isNotEmpty ? decryptedText : 'Decryption failed or data is empty'),
-          actions: [
-            ElevatedButton(
-              child: Text('OK'),
-              onPressed: () {
-                Navigator.pop(context);
-              },
+      try {
+        final info = await ScanActivity.fetchOccupantVehicleInfo(decryptedText);
+        setState(() {
+          occupantVehicleInfo = info['data'];
+        });
+
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            contentPadding: EdgeInsets.zero,
+            content: Container(
+              width: double.maxFinite,
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    decoration: const BoxDecoration(
+                      color: Colors.blue,
+                      borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(8.0),
+                      ),
+                    ),
+                    padding: const EdgeInsets.all(16.0),
+                    child: const Text(
+                      'Scan Result',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  const SizedBox(height: 16.0),
+                  if (occupantVehicleInfo != null && occupantVehicleInfo!['profilePicture'] != null)
+                    Center(
+                      child: CircleAvatar(
+                        radius: 50.0,
+                        backgroundImage: MemoryImage(base64Decode(occupantVehicleInfo!['profilePicture'])),
+                      ),
+                    ),
+                  const SizedBox(height: 16.0),
+                  if (occupantVehicleInfo != null)
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Center(
+                          child: Text(
+                            '${occupantVehicleInfo!['Firstname']} ${occupantVehicleInfo!['Lastname']}',
+                            style: const TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 16.0),
+                        _buildInfoRow('Firstname', occupantVehicleInfo!['Firstname']),
+                        _buildInfoRow('Lastname', occupantVehicleInfo!['Lastname']),
+                        _buildInfoRow('Phone Number', occupantVehicleInfo!['Phonenumber']),
+                        _buildInfoRow('Address', occupantVehicleInfo!['Address']),
+                        _buildInfoRow('Vehicle Type', occupantVehicleInfo!['Vehicle_Type']),
+                        _buildInfoRow('Vehicle Color', occupantVehicleInfo!['Vehicle_Color']),
+                        _buildInfoRow('Vehicle Plate Number', occupantVehicleInfo!['Vehicle_Platenumber']),
+                        _buildInfoRow('Vehicle Model', occupantVehicleInfo!['Vehicle_Model']),
+                        _buildInfoRow('Vehicle Brand', occupantVehicleInfo!['Vehicle_Brand']),
+                        const SizedBox(height: 16.0),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            ElevatedButton(
+                              onPressed: () async {
+                                final occupantId = occupantVehicleInfo!['Occupant_ID'] as int?;
+                                final vehicleId = occupantVehicleInfo!['Vehicle_ID'] as int?;
+
+                                if (occupantId != null && vehicleId != null) {
+                                  await ParkingLogRecord.recordLog(
+                                    occupantId: occupantId,
+                                    vehicleId: vehicleId,
+                                  );
+                                } else {
+                                  print('Invalid data: occupantId or vehicleId is null');
+                                }
+                                Navigator.pop(context);
+                              },
+                              child: const Text('YES'),
+                            ),
+                            const SizedBox(width: 16.0),
+                            ElevatedButton(
+                              onPressed: () {
+                                Navigator.pop(context);
+                              },
+                              child: const Text('NO'),
+                            ),
+                          ],
+                        ),
+                      ],
+                    )
+                  else
+                    const Center(child: Text('No data found')),
+                  const SizedBox(height: 16.0),
+                  Align(
+                    alignment: Alignment.centerRight,
+                    child: ElevatedButton(
+                      child: const Text('OK'),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Colors.blue,
+                        onPrimary: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8.0),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ],
-        ),
-      );
+          ),
+        );
+      } catch (e) {
+        print('Error fetching info: $e');
+        showDialog(
+          context: context,
+          builder: (context) => AlertDialog(
+            title: const Text('Error'),
+            content: Text('Failed to fetch occupant and vehicle info. Error: $e'),
+            actions: [
+              ElevatedButton(
+                child: const Text('OK'),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
+            ],
+          ),
+        );
+      }
     }
+  }
+
+  Widget _buildInfoRow(String label, String? value) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 4.0),
+      child: Row(
+        children: [
+          Text(
+            '$label: ',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: Colors.black54,
+            ),
+          ),
+          Expanded(
+            child: Text(
+              value ?? 'N/A',
+              style: TextStyle(
+                color: Colors.black87,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Guard App'),
+        title: const Text('Guard App'),
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(Icons.logout),
+            icon: const Icon(Icons.logout),
             onPressed: () async {
               await Shared.saveLoginSharedPreference(false);
               Navigator.pushReplacement(
@@ -94,18 +249,18 @@ class _HomePageState extends State<HomePage> {
                 primary: Colors.blue,
                 onPrimary: Colors.white,
                 elevation: 5,
-                padding: EdgeInsets.all(16),
+                padding: const EdgeInsets.all(16),
               ),
-              child: Text('Scan QR Code'),
+              child: const Text('Scan QR Code'),
               onPressed: _handleScan,
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             OutlinedButton(
               style: OutlinedButton.styleFrom(
-                side: BorderSide(color: Colors.grey),
-                padding: EdgeInsets.all(16),
+                side: const BorderSide(color: Colors.grey),
+                padding: const EdgeInsets.all(16),
               ),
-              child: Text('View Parking Log'),
+              child: const Text('View Parking Log'),
               onPressed: () {
                 Navigator.push(
                   context,
@@ -125,15 +280,15 @@ class ParkingLogScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Parking Log'),
+        title: const Text('Parking Log'),
         centerTitle: true,
       ),
       body: ListView.builder(
-        itemCount: 10,
+        itemCount: 10, // Adjust according to the actual data
         itemBuilder: (context, index) {
           return ListTile(
             title: Text('Parking Log Entry $index'),
-            subtitle: Text('Date and Time'),
+            subtitle: const Text('Date and Time'),
           );
         },
       ),
