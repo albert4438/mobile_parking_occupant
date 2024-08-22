@@ -9,7 +9,7 @@ class ParkingLogRecord {
     try {
       // Check the last log to determine if it's a time_in or time_out
       final response = await http.get(
-        Uri.parse('http://192.168.108.159:8080/parking_occupant/api/ParkingLog.php?occupantId=$occupantId&vehicleId=$vehicleId'),
+        Uri.parse('http://192.168.245.159:8080/parking_occupant/api/ParkingLog.php?occupantId=$occupantId&vehicleId=$vehicleId'),
       );
 
       if (response.statusCode == 200) {
@@ -17,7 +17,7 @@ class ParkingLogRecord {
         final isTimeIn = lastLog['time_out'] == null;
 
         final logResponse = await http.post(
-          Uri.parse('http://192.168.108.159:8080/parking_occupant/api/ParkingLog.php'),
+          Uri.parse('http://192.168.137.225:8080/parking_occupant/api/ParkingLog.php'),
           headers: {'Content-Type': 'application/json'},
           body: json.encode({
             'occupantId': occupantId,

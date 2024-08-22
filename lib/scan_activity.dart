@@ -6,6 +6,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class ScanActivity {
+  
   static Future<String> scanQrCode(BuildContext context) async {
     try {
       String qrCodeData = await FlutterBarcodeScanner.scanBarcode(
@@ -27,7 +28,7 @@ class ScanActivity {
   }
 
   static Future<Map<String, dynamic>> fetchOccupantVehicleInfo(String decryptedData) async {
-    String url = 'http://192.168.108.159:8080/parking_occupant/api/GetOccupantVehicleInfo.php';
+    String url = 'http://192.168.252.160:8080/parking_occupant/api/GetOccupantVehicleInfo.php';
 
     // Ensure decryptedData is a valid JSON string
     Map<String, dynamic> requestData;
@@ -56,4 +57,5 @@ class ScanActivity {
       throw Exception('Failed to load occupant and vehicle info');
     }
   }
+
 }
