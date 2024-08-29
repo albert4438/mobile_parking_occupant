@@ -21,11 +21,13 @@ class _HomePageState extends State<HomePage> {
   late String encryptionKey;
   String decryptedText = '';
   Map<String, dynamic>? occupantVehicleInfo;
+  late int personnelId; // Added personnelId to keep track of the logged-in personnel
 
   @override
   void initState() {
     super.initState();
     _loadEncryptionKey();
+    _loadPersonnelId(); // Load personnel ID from SharedPreferences or another source
   }
 
   Future<void> _loadEncryptionKey() async {
@@ -35,6 +37,14 @@ class _HomePageState extends State<HomePage> {
     } else {
       print('Encryption key loaded successfully');
     }
+  }
+
+  Future<void> _loadPersonnelId() async {
+    // Assuming personnelId is stored in SharedPreferences
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    setState(() {
+      personnelId = prefs.getInt('personnel_id') ?? 0;
+    });
   }
 
   Future<void> _handleScan() async {
@@ -51,6 +61,12 @@ class _HomePageState extends State<HomePage> {
         setState(() {
           occupantVehicleInfo = info['data'];
         });
+
+        print('Occupant Vehicle Info: $occupantVehicleInfo'); // Log the info
+
+        if (occupantVehicleInfo == null || occupantVehicleInfo!.isEmpty) {
+            throw Exception("Failed to fetch occupant or vehicle information.");
+        }
 
         showDialog(
           context: context,
@@ -109,6 +125,8 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         const SizedBox(height: 16.0),
+                        _buildInfoRow('OccupantBULOK', occupantVehicleInfo!['Occupant_ID']),
+                        _buildInfoRow('VehicleBULOK', occupantVehicleInfo!['Vehicle_ID']),
                         _buildInfoRow('Firstname', occupantVehicleInfo!['Firstname']),
                         _buildInfoRow('Lastname', occupantVehicleInfo!['Lastname']),
                         _buildInfoRow('Phone Number', occupantVehicleInfo!['Phonenumber']),
@@ -122,23 +140,37 @@ class _HomePageState extends State<HomePage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            ElevatedButton(
-                              onPressed: () async {
-                                final occupantId = occupantVehicleInfo!['Occupant_ID'] as int?;
-                                final vehicleId = occupantVehicleInfo!['Vehicle_ID'] as int?;
 
-                                if (occupantId != null && vehicleId != null) {
-                                  await ParkingLogRecord.recordLog(
-                                    occupantId: occupantId,
-                                    vehicleId: vehicleId,
-                                  );
-                                } else {
-                                  print('Invalid data: occupantId or vehicleId is null');
-                                }
-                                Navigator.pop(context);
-                              },
-                              child: const Text('YES'),
-                            ),
+                        ElevatedButton(
+                          onPressed: () async {
+                            final occupantId = occupantVehicleInfo!['occupantId'] ?? occupantVehicleInfo!['Occupant_ID'] as int?;
+                            final vehicleId = occupantVehicleInfo!['vehicleId'] ?? occupantVehicleInfo!['Vehicle_ID'] as int?;
+
+                            print('Occupant ID: $occupantId'); // Log Occupant ID
+                            print('Vehicle ID: $vehicleId');   // Log Vehicle ID
+
+                            if (occupantId != null && vehicleId != null) {
+                              // Fetch the last action type for the vehicle
+                              String? lastActionType = await ParkingLogRecord.fetchLastActionType(vehicleId);
+
+                              // Determine the new action type
+                              String actionType = lastActionType == null || lastActionType == 'EXIT' ? 'ENTRY' : 'EXIT';
+
+                              await ParkingLogRecord.recordLog(
+                                occupantId: occupantId,
+                                vehicleId: vehicleId,
+                                actionType: actionType,
+                                personnelId: personnelId,
+                              );
+                            } else {
+                              print('Invalid data: occupantId or vehicleId is null');
+                            }
+                            Navigator.pop(context);
+                          },
+                          child: const Text('YES'),
+                        ),
+
+
                             const SizedBox(width: 16.0),
                             ElevatedButton(
                               onPressed: () {
@@ -294,6 +326,8 @@ class ParkingLogScreen extends StatelessWidget {
       ),
     );
   }
+
+  
 }
 
 class Shared {

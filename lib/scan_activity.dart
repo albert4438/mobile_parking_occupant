@@ -30,6 +30,9 @@ class ScanActivity {
   static Future<Map<String, dynamic>> fetchOccupantVehicleInfo(String decryptedData) async {
     String url = 'http://192.168.252.160:8080/parking_occupant/api/GetOccupantVehicleInfo.php';
 
+    // Debugging: Log decryptedData before processing
+    print('Decrypted Data before decoding: $decryptedData');
+
     // Ensure decryptedData is a valid JSON string
     Map<String, dynamic> requestData;
     try {
@@ -52,9 +55,16 @@ class ScanActivity {
     print('Response body: ${response.body}');
 
     if (response.statusCode == 200) {
-      return json.decode(response.body);
+        final responseData = json.decode(response.body);
+        print('Response Data: $responseData'); // Log the response data
+
+        if (responseData.containsKey('data') && responseData['data'] != null) {
+            return responseData;
+        } else {
+            throw Exception('No valid data found in response');
+        }
     } else {
-      throw Exception('Failed to load occupant and vehicle info');
+        throw Exception('Failed to load occupant and vehicle info');
     }
   }
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:shared_preferences/shared_preferences.dart'; // Import SharedPreferences
 
 import 'home_page.dart'; // Import the home page
 
@@ -138,6 +139,13 @@ class _LoginPageState extends State<LoginPage> {
         var user = jsonDecode(response.body); // return type list<Map>
         if (user.isNotEmpty) {
           print("Login successful! You are logged in as ${user[0]['jobTitle']}"); // Add this line to print a success message
+          print("Login successful! Personnel_ID is ${user[0]['Personnel_ID']}");
+
+          // Store Personnel_ID and other data in SharedPreferences
+          SharedPreferences prefs = await SharedPreferences.getInstance();
+          await prefs.setInt('personnel_id', user[0]['Personnel_ID']);
+          // await prefs.setString('job_title', user[0]['jobTitle']);
+
           setState(() {
             _msg = "Login successful! You are logged in as ${user[0]['jobTitle']}";
           });

@@ -5,42 +5,76 @@ class ParkingLogRecord {
   static Future<void> recordLog({
     required int occupantId,
     required int vehicleId,
+    required String actionType,
+    required int personnelId,
   }) async {
-    try {
-      // Check the last log to determine if it's a time_in or time_out
-      final response = await http.get(
-        Uri.parse('http://192.168.245.159:8080/parking_occupant/api/ParkingLog.php?occupantId=$occupantId&vehicleId=$vehicleId'),
-      );
+    final String url = 'http://192.168.252.160:8080/parking_occupant/api/RecordParkingLog.php'; // Ensure this URL is correct
 
-      if (response.statusCode == 200) {
-        final lastLog = json.decode(response.body);
-        final isTimeIn = lastLog['time_out'] == null;
+    final Map<String, dynamic> data = {
+      'occupant_id': occupantId,
+      'vehicle_id': vehicleId,
+      'action_type': actionType,
+      'personnel_id': personnelId
+    };
 
-        final logResponse = await http.post(
-          Uri.parse('http://192.168.137.225:8080/parking_occupant/api/ParkingLog.php'),
+      try {
+        final response = await http.post(
+          Uri.parse(url),
           headers: {'Content-Type': 'application/json'},
-          body: json.encode({
-            'occupantId': occupantId,
-            'vehicleId': vehicleId,
-            'isTimeIn': isTimeIn,
-          }),
+          body: json.encode(data),
         );
 
-        if (logResponse.statusCode == 200) {
-          final result = json.decode(logResponse.body);
-          if (result['success']) {
-            print('Log recorded successfully');
-          } else {
-            print('Failed to record log: ${result['message']}');
+        if (response.statusCode == 200) {
+          try {
+            final responseData = json.decode(response.body);
+            if (responseData['success']) {
+              print('Log recorded successfully');
+            } else {
+              print('Failed to record log: ${responseData['message']}');
+            }
+          } catch (e) {
+            print('Failed to parse JSON response: ${response.body}');
           }
         } else {
-          print('Failed to record log: HTTP status ${logResponse.statusCode}');
+          print('Failed to record log: ${response.statusCode} ${response.body}');
         }
-      } else {
-        print('Failed to check last log: HTTP status ${response.statusCode}');
+      } catch (e) {
+        print('Error recording log: $e');
       }
-    } catch (e) {
-      print('Error recording log: $e');
-    }
+
   }
+
+
+  // In the ParkingLogRecord class
+
+  static Future<String?> fetchLastActionType(int vehicleId) async {
+  final String url = 'http://192.168.252.160:8080/parking_occupant/api/GetLastActionType.php'; // Ensure this URL is correct
+
+  try {
+    final response = await http.post(
+      Uri.parse(url),
+      headers: {'Content-Type': 'application/json'},
+      body: json.encode({'vehicle_id': vehicleId}),
+    );
+
+    if (response.statusCode == 200) {
+      final responseData = json.decode(response.body);
+      if (responseData['success']) {
+        return responseData['last_action_type'];
+      } else {
+        print('Failed to fetch last action type: ${responseData['message']}');
+      }
+    } else {
+      print('Failed to fetch last action type: ${response.statusCode} ${response.body}');
+    }
+  } catch (e) {
+    print('Error fetching last action type: $e');
+  }
+  return null; // Return null if there's an error or no action type found
 }
+
+}
+
+
+
+
