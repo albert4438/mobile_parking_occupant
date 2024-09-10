@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart'; // Import SharedPreferences
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'home_page.dart'; // Import the home page
 
@@ -23,8 +24,10 @@ class _LoginPageState extends State<LoginPage> {
           begin: Alignment.topRight,
           end: Alignment.bottomLeft,
           colors: [
-            Colors.blue,
-            Colors.red,
+            // Colors.blue,
+            // Colors.red,
+            Color(0xFF104a8e), // Color #104a8e
+            Color(0xFFEFC958), // Color #EFC958
           ],
         ),
       ),
@@ -119,7 +122,7 @@ class _LoginPageState extends State<LoginPage> {
 
   Future<void> login() async {
     // String url = "http://10.0.2.2:8080/parking_occupant/api/loginPersonnel.php";
-    String url = "http://192.168.252.160:8080/parking_occupant/api/loginPersonnel.php";
+    String url = "http://192.168.4.159:8080/parking_occupant/api/loginPersonnel.php";
 
     final Map<String, dynamic> body = {
       "username": _usernameController.text,
@@ -140,7 +143,7 @@ class _LoginPageState extends State<LoginPage> {
         if (user.isNotEmpty) {
           print("Login successful! You are logged in as ${user[0]['jobTitle']}"); // Add this line to print a success message
           print("Login successful! Personnel_ID is ${user[0]['Personnel_ID']}");
-
+        
           // Store Personnel_ID and other data in SharedPreferences
           SharedPreferences prefs = await SharedPreferences.getInstance();
           await prefs.setInt('personnel_id', user[0]['Personnel_ID']);

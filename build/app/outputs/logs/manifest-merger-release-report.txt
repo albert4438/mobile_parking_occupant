@@ -1,0 +1,330 @@
+-- Merging decision tree log ---
+application
+INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:7:5-37:19
+MERGED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:15:5-19:19
+MERGED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:15:5-19:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:24:5-31:19
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\a03f8cd5396392dba4080def04b26ddf\transformed\material-1.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\a03f8cd5396392dba4080def04b26ddf\transformed\material-1.3.0\AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\380320b7654a166f9c2c487b4f37e908\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\380320b7654a166f9c2c487b4f37e908\transformed\constraintlayout-2.0.1\AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-vision:20.1.3] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\d57c39e5b2a1c93876e3674408da430e\transformed\jetified-play-services-vision-20.1.3\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision:20.1.3] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\d57c39e5b2a1c93876e3674408da430e\transformed\jetified-play-services-vision-20.1.3\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:19.1.3] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8c4cc187d54c82bb71003878e5094595\transformed\jetified-play-services-vision-common-19.1.3\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-vision-common:19.1.3] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8c4cc187d54c82bb71003878e5094595\transformed\jetified-play-services-vision-common-19.1.3\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\071a31976c32a7a5f3570496f835bb5c\transformed\jetified-play-services-clearcut-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\071a31976c32a7a5f3570496f835bb5c\transformed\jetified-play-services-clearcut-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\d265685ef4d8b60b0054ff0b29395f0e\transformed\jetified-play-services-phenotype-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\d265685ef4d8b60b0054ff0b29395f0e\transformed\jetified-play-services-phenotype-17.0.0\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\45663602a55eeb8908d1eb6177383371\transformed\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\45663602a55eeb8908d1eb6177383371\transformed\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.6.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3654dcf93b3c49f92dd62c3d6b4a0164\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.6.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3654dcf93b3c49f92dd62c3d6b4a0164\transformed\core-1.6.0\AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\fe8e6a23c1866bbf3cc251580112db19\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\fe8e6a23c1866bbf3cc251580112db19\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.6.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3654dcf93b3c49f92dd62c3d6b4a0164\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+	android:label
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:8:9-46
+	android:largeHeap
+		ADDED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:16:9-33
+	android:icon
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:10:9-43
+	android:theme
+		ADDED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:17:9-59
+	android:name
+		INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:9:9-42
+manifest
+ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:1:1-38:12
+INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:1:1-38:12
+INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:1:1-38:12
+INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:1:1-38:12
+MERGED from [:shared_preferences_android] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\shared_preferences_android\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-21:12
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\b00b6e6a83f14813ece6e8dd6c80ddbe\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3e315c572afabe0c975fb78d31557897\transformed\multidex-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\a03f8cd5396392dba4080def04b26ddf\transformed\material-1.3.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\380320b7654a166f9c2c487b4f37e908\transformed\constraintlayout-2.0.1\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\dae34ec5d96a6a0d69608e594837e067\transformed\appcompat-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\dac5f7943ec90efff09dab5f476b981a\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8629afeee8b16221e68cec49b7b14760\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-vision:20.1.3] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\d57c39e5b2a1c93876e3674408da430e\transformed\jetified-play-services-vision-20.1.3\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-vision-common:19.1.3] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8c4cc187d54c82bb71003878e5094595\transformed\jetified-play-services-vision-common-19.1.3\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\071a31976c32a7a5f3570496f835bb5c\transformed\jetified-play-services-clearcut-17.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-flags:17.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\202d64a4b3bbf02a5879016b75f121f1\transformed\jetified-play-services-flags-17.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\d265685ef4d8b60b0054ff0b29395f0e\transformed\jetified-play-services-phenotype-17.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\45663602a55eeb8908d1eb6177383371\transformed\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\fa10a3e318278a7bd6df01c99f147fdd\transformed\fragment-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\55c42e58070c2234e970696dbb4dca01\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\72d68b0dbded2aff1fbee30bbd464eb0\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\4cd98e046ad09e74b9f8c3e971039c6f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\4635681bffca7ae0d6b4a7efaa373f69\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\529d9c0469e14123f0663b07a264d058\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3ebcfccb0055f85aa7a1d34746c5b428\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\02375f8613e0fa48222f643d14075535\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\b7428b27ce05e60ca4d8ef665ce1d43e\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\4b79b20f235d02ff84041194e2917e04\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\ab03f52aa9a3f61f36c877a84d6ccb3d\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\7fa7ba3d9c70ecffd0b9e8b2dabf78b1\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\0e0cf9f2b71696ab09774902671cdf02\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\f4002546f1e45c1885d55615975d3db3\transformed\jetified-activity-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\7ce29c763da7fb9a3a48d630c973091f\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3b33f85cc537cbe9fd032e0cda68c67f\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\756928b87019ab420728296f4223d050\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\930dc15b0ae6ddba93172dd129c075b6\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5dfd66a383e62a0a6fb97ddb602328d7\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.6.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3654dcf93b3c49f92dd62c3d6b4a0164\transformed\core-1.6.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5c5ee19f1659da3da1d61fa584c83b8f\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\dfa63cfac237cbafe42fe309ff2ed291\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5e9168dc52a02eec1eb78035bdb1bd2c\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\4374ad2ab185850419eb3281f253577f\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5a08a8a6c076cd6bf888b27c7a179a76\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\6ef8ffe96b6b16649a078d8c90522ef5\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\333dc92a567d06f95143a2081809248f\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8c6e3723681df32e2f06e7df7d2f5cd7\transformed\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\fe8e6a23c1866bbf3cc251580112db19\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\2097e7ad5ce61a5e2ba599ad0c986fb8\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\bd1178fb383e4ab1c22b0af83ee5556c\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\b6713243300a0f816a879ed3bd634cfb\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5c5b5d75a0753952c5729dafaa560402\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\406e400eb0a94db76f45404bffa48bdf\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\c5347a140ab735c1d4ced9833cde643c\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
+INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:1:1-38:12
+INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:1:1-38:12
+INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:1:1-38:12
+	package
+		INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:1:1-38:12
+		INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:1:1-38:12
+		INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+	android:versionCode
+		INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:1:1-38:12
+		INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:1:11-69
+uses-permission#android.permission.CAMERA
+ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:3:5-65
+MERGED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-65
+MERGED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:9:5-65
+	android:name
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:3:22-62
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:4:5-80
+	android:name
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:4:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:5:5-79
+	android:name
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:5:22-77
+uses-sdk
+INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+MERGED from [:shared_preferences_android] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\shared_preferences_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\shared_preferences_android\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_plugin_android_lifecycle\intermediates\merged_manifest\release\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\b00b6e6a83f14813ece6e8dd6c80ddbe\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\b00b6e6a83f14813ece6e8dd6c80ddbe\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3e315c572afabe0c975fb78d31557897\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3e315c572afabe0c975fb78d31557897\transformed\multidex-2.0.0\AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\a03f8cd5396392dba4080def04b26ddf\transformed\material-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.3.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\a03f8cd5396392dba4080def04b26ddf\transformed\material-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\380320b7654a166f9c2c487b4f37e908\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\380320b7654a166f9c2c487b4f37e908\transformed\constraintlayout-2.0.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\dae34ec5d96a6a0d69608e594837e067\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\dae34ec5d96a6a0d69608e594837e067\transformed\appcompat-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\dac5f7943ec90efff09dab5f476b981a\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\dac5f7943ec90efff09dab5f476b981a\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8629afeee8b16221e68cec49b7b14760\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8629afeee8b16221e68cec49b7b14760\transformed\jetified-viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-vision:20.1.3] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\d57c39e5b2a1c93876e3674408da430e\transformed\jetified-play-services-vision-20.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision:20.1.3] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\d57c39e5b2a1c93876e3674408da430e\transformed\jetified-play-services-vision-20.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:19.1.3] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8c4cc187d54c82bb71003878e5094595\transformed\jetified-play-services-vision-common-19.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-vision-common:19.1.3] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8c4cc187d54c82bb71003878e5094595\transformed\jetified-play-services-vision-common-19.1.3\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\071a31976c32a7a5f3570496f835bb5c\transformed\jetified-play-services-clearcut-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-clearcut:17.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\071a31976c32a7a5f3570496f835bb5c\transformed\jetified-play-services-clearcut-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:17.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\202d64a4b3bbf02a5879016b75f121f1\transformed\jetified-play-services-flags-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-flags:17.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\202d64a4b3bbf02a5879016b75f121f1\transformed\jetified-play-services-flags-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\d265685ef4d8b60b0054ff0b29395f0e\transformed\jetified-play-services-phenotype-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-phenotype:17.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\d265685ef4d8b60b0054ff0b29395f0e\transformed\jetified-play-services-phenotype-17.0.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\45663602a55eeb8908d1eb6177383371\transformed\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\45663602a55eeb8908d1eb6177383371\transformed\jetified-play-services-tasks-17.2.0\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\fa10a3e318278a7bd6df01c99f147fdd\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\fa10a3e318278a7bd6df01c99f147fdd\transformed\fragment-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\55c42e58070c2234e970696dbb4dca01\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\55c42e58070c2234e970696dbb4dca01\transformed\jetified-appcompat-resources-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\72d68b0dbded2aff1fbee30bbd464eb0\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\72d68b0dbded2aff1fbee30bbd464eb0\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\4cd98e046ad09e74b9f8c3e971039c6f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\4cd98e046ad09e74b9f8c3e971039c6f\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\4635681bffca7ae0d6b4a7efaa373f69\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\4635681bffca7ae0d6b4a7efaa373f69\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\529d9c0469e14123f0663b07a264d058\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\529d9c0469e14123f0663b07a264d058\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3ebcfccb0055f85aa7a1d34746c5b428\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3ebcfccb0055f85aa7a1d34746c5b428\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\02375f8613e0fa48222f643d14075535\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\02375f8613e0fa48222f643d14075535\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\b7428b27ce05e60ca4d8ef665ce1d43e\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\b7428b27ce05e60ca4d8ef665ce1d43e\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\4b79b20f235d02ff84041194e2917e04\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\4b79b20f235d02ff84041194e2917e04\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\ab03f52aa9a3f61f36c877a84d6ccb3d\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\ab03f52aa9a3f61f36c877a84d6ccb3d\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\7fa7ba3d9c70ecffd0b9e8b2dabf78b1\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\7fa7ba3d9c70ecffd0b9e8b2dabf78b1\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\0e0cf9f2b71696ab09774902671cdf02\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\0e0cf9f2b71696ab09774902671cdf02\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\f4002546f1e45c1885d55615975d3db3\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\f4002546f1e45c1885d55615975d3db3\transformed\jetified-activity-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\7ce29c763da7fb9a3a48d630c973091f\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\7ce29c763da7fb9a3a48d630c973091f\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3b33f85cc537cbe9fd032e0cda68c67f\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3b33f85cc537cbe9fd032e0cda68c67f\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\756928b87019ab420728296f4223d050\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\756928b87019ab420728296f4223d050\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\930dc15b0ae6ddba93172dd129c075b6\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\930dc15b0ae6ddba93172dd129c075b6\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5dfd66a383e62a0a6fb97ddb602328d7\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5dfd66a383e62a0a6fb97ddb602328d7\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.6.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3654dcf93b3c49f92dd62c3d6b4a0164\transformed\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.6.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3654dcf93b3c49f92dd62c3d6b4a0164\transformed\core-1.6.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5c5ee19f1659da3da1d61fa584c83b8f\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5c5ee19f1659da3da1d61fa584c83b8f\transformed\lifecycle-runtime-2.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\dfa63cfac237cbafe42fe309ff2ed291\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\dfa63cfac237cbafe42fe309ff2ed291\transformed\jetified-savedstate-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5e9168dc52a02eec1eb78035bdb1bd2c\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5e9168dc52a02eec1eb78035bdb1bd2c\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\4374ad2ab185850419eb3281f253577f\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\4374ad2ab185850419eb3281f253577f\transformed\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5a08a8a6c076cd6bf888b27c7a179a76\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5a08a8a6c076cd6bf888b27c7a179a76\transformed\jetified-tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\6ef8ffe96b6b16649a078d8c90522ef5\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\6ef8ffe96b6b16649a078d8c90522ef5\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\333dc92a567d06f95143a2081809248f\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\333dc92a567d06f95143a2081809248f\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8c6e3723681df32e2f06e7df7d2f5cd7\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8c6e3723681df32e2f06e7df7d2f5cd7\transformed\core-runtime-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\fe8e6a23c1866bbf3cc251580112db19\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\fe8e6a23c1866bbf3cc251580112db19\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\2097e7ad5ce61a5e2ba599ad0c986fb8\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\2097e7ad5ce61a5e2ba599ad0c986fb8\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\bd1178fb383e4ab1c22b0af83ee5556c\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\bd1178fb383e4ab1c22b0af83ee5556c\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\b6713243300a0f816a879ed3bd634cfb\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\b6713243300a0f816a879ed3bd634cfb\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5c5b5d75a0753952c5729dafaa560402\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\5c5b5d75a0753952c5729dafaa560402\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\406e400eb0a94db76f45404bffa48bdf\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\406e400eb0a94db76f45404bffa48bdf\transformed\lifecycle-viewmodel-2.1.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\c5347a140ab735c1d4ced9833cde643c\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\c5347a140ab735c1d4ced9833cde643c\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:20:5-22:41
+INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml
+activity#com.example.flutter_application_1.MainActivity
+ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:11:9-31:20
+	android:launchMode
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:14:13-43
+	android:hardwareAccelerated
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:17:13-47
+	android:windowSoftInputMode
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:18:13-55
+	android:exported
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:13:13-36
+	android:configChanges
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:16:13-163
+	android:theme
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:15:13-47
+	android:name
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:12:13-41
+meta-data#io.flutter.embedding.android.NormalTheme
+ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:23:13-26:17
+	android:resource
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:25:15-52
+	android:name
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:24:15-70
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:27:13-30:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:28:17-68
+	android:name
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:28:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:29:17-76
+	android:name
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:29:27-74
+meta-data#flutterEmbedding
+ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:34:9-36:33
+	android:value
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:36:13-30
+	android:name
+		ADDED from C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app\src\main\AndroidManifest.xml:35:13-44
+uses-feature#android.hardware.camera
+ADDED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:11:5-60
+	android:name
+		ADDED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:11:19-57
+uses-permission#android.permission.FLASHLIGHT
+ADDED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:13:5-69
+	android:name
+		ADDED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:13:22-66
+activity#com.amolg.flutterbarcodescanner.BarcodeCaptureActivity
+ADDED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:18:9-91
+	android:name
+		ADDED from [:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\release\AndroidManifest.xml:18:19-88
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:24:13-79
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:24:13-58

@@ -6,7 +6,7 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="19"
-9        android:targetSdkVersion="33" />
+9        android:targetSdkVersion="34" />
 10    <!--
 11         The INTERNET permission is required for development. Specifically,
 12         the Flutter tool needs it to communicate with the running application
@@ -43,7 +43,7 @@
 31    <application
 32        android:name="android.app.Application"
 33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-33-->[androidx.core:core:1.6.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\7e9df2ac2213a6bd3cef0f2f27870d79\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
+33-->[androidx.core:core:1.6.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3654dcf93b3c49f92dd62c3d6b4a0164\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
 34        android:debuggable="true"
 35        android:icon="@mipmap/ic_launcher"
 36        android:label="flutter_application_1"
@@ -89,33 +89,33 @@
 72-->[:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:18:19-88
 73
 74        <uses-library
-74-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+74-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
 75            android:name="androidx.window.extensions"
-75-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+75-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
 76            android:required="false" />
-76-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+76-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
 77        <uses-library
-77-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+77-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
 78            android:name="androidx.window.sidecar"
-78-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+78-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
 79            android:required="false" />
-79-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\25cee5f028ac2a6b79fd6278ff5b59e2\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
+79-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
 80
 81        <activity
-81-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\1a7d33a1dd6289df9ecade9fe9e3ac6f\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:23:9-26:75
+81-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:23:9-26:75
 82            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-82-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\1a7d33a1dd6289df9ecade9fe9e3ac6f\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:24:13-79
+82-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:24:13-79
 83            android:exported="false"
-83-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\1a7d33a1dd6289df9ecade9fe9e3ac6f\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:25:13-37
+83-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:25:13-37
 84            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-84-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\1a7d33a1dd6289df9ecade9fe9e3ac6f\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:26:13-72
+84-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:26:13-72
 85
 86        <meta-data
-86-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\e400f5504a9bef5c23ec6dbeeb3aa8aa\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:23:9-25:69
+86-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:23:9-25:69
 87            android:name="com.google.android.gms.version"
-87-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\e400f5504a9bef5c23ec6dbeeb3aa8aa\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:24:13-58
+87-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:24:13-58
 88            android:value="@integer/google_play_services_version" />
-88-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\e400f5504a9bef5c23ec6dbeeb3aa8aa\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:25:13-66
+88-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:25:13-66
 89    </application>
 90
 91</manifest>

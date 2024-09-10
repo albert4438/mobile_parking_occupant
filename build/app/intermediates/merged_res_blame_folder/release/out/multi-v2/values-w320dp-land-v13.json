@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.flutter_application_1.app-mergeReleaseResources-21:/values-w320dp-land-v13/values-w320dp-land-v13.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Albert Luzuriaga\\.gradle\\caches\\transforms-3\\a03f8cd5396392dba4080def04b26ddf\\transformed\\material-1.3.0\\res\\values-w320dp-land-v13\\values-w320dp-land-v13.xml",
+                    "from": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,110,172",
+                        "endColumns": "54,61,51",
+                        "endOffsets": "105,167,219"
+                    }
+                }
+            ]
+        }
+    ]
+}

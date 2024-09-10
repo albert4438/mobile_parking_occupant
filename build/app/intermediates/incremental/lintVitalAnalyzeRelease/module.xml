@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\android\app"
+    name=":app"
+    type="APP"
+    maven="android:app:"
+    gradle="7.3.0"
+    buildFolder="C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\app"
+    bootClassPath="C:\Users\Albert Luzuriaga\AppData\Local\Android\sdk\platforms\android-33\android.jar;C:\Users\Albert Luzuriaga\AppData\Local\Android\sdk\build-tools\30.0.3\core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-33">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

@@ -1,10 +1,7 @@
-#Thu Aug 29 01:52:58 PST 2024
+#Tue Sep 10 14:59:23 PST 2024
 base.0=C\:\\Users\\Albert Luzuriaga\\OneDrive\\Desktop\\mobile_parking_occupant\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 base.1=C\:\\Users\\Albert Luzuriaga\\OneDrive\\Desktop\\mobile_parking_occupant\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex
-base.2=C\:\\Users\\Albert Luzuriaga\\OneDrive\\Desktop\\mobile_parking_occupant\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes3.dex
 path.0=classes.dex
 path.1=classes2.dex
-path.2=classes3.dex
 renamed.0=classes.dex
 renamed.1=classes2.dex
-renamed.2=classes3.dex
