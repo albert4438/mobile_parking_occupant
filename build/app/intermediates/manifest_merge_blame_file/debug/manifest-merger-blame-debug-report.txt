@@ -40,82 +40,101 @@
 29-->[:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-69
 29-->[:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-66
 30
-31    <application
-32        android:name="android.app.Application"
-33        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-33-->[androidx.core:core:1.6.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\3654dcf93b3c49f92dd62c3d6b4a0164\transformed\core-1.6.0\AndroidManifest.xml:24:18-86
-34        android:debuggable="true"
-35        android:icon="@mipmap/ic_launcher"
-36        android:label="flutter_application_1"
-37        android:largeHeap="true"
-37-->[:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-33
-38        android:theme="@style/Theme.AppCompat.NoActionBar" >
-38-->[:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-59
-39        <activity
-40            android:name="com.example.flutter_application_1.MainActivity"
-41            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-42            android:exported="true"
-43            android:hardwareAccelerated="true"
-44            android:launchMode="singleTop"
-45            android:theme="@style/LaunchTheme"
-46            android:windowSoftInputMode="adjustResize" >
-47
-48            <!--
-49                 Specifies an Android theme to apply to this Activity as soon as
-50                 the Android process has started. This theme is visible to the user
-51                 while the Flutter UI initializes. After that, this theme continues
-52                 to determine the Window background behind the Flutter UI.
-53            -->
-54            <meta-data
-55                android:name="io.flutter.embedding.android.NormalTheme"
-56                android:resource="@style/NormalTheme" />
-57
-58            <intent-filter>
-59                <action android:name="android.intent.action.MAIN" />
-60
-61                <category android:name="android.intent.category.LAUNCHER" />
-62            </intent-filter>
-63        </activity>
-64        <!--
-65             Don't delete the meta-data below.
-66             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-67        -->
-68        <meta-data
-69            android:name="flutterEmbedding"
-70            android:value="2" />
-71
-72        <activity android:name="com.amolg.flutterbarcodescanner.BarcodeCaptureActivity" />
-72-->[:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-91
-72-->[:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:18:19-88
-73
-74        <uses-library
-74-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
-75            android:name="androidx.window.extensions"
-75-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
-76            android:required="false" />
-76-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
-77        <uses-library
-77-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
-78            android:name="androidx.window.sidecar"
-78-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
-79            android:required="false" />
-79-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
-80
-81        <activity
-81-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:23:9-26:75
-82            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-82-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:24:13-79
-83            android:exported="false"
-83-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:25:13-37
-84            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-84-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:26:13-72
-85
-86        <meta-data
-86-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:23:9-25:69
-87            android:name="com.google.android.gms.version"
-87-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:24:13-58
-88            android:value="@integer/google_play_services_version" />
-88-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:25:13-66
-89    </application>
+31    <permission
+31-->[androidx.core:core:1.10.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\0338a032e974f1e30b0ac09ddc181517\transformed\core-1.10.1\AndroidManifest.xml:22:5-24:47
+32        android:name="com.example.flutter_application_1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+32-->[androidx.core:core:1.10.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\0338a032e974f1e30b0ac09ddc181517\transformed\core-1.10.1\AndroidManifest.xml:23:9-81
+33        android:protectionLevel="signature" />
+33-->[androidx.core:core:1.10.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\0338a032e974f1e30b0ac09ddc181517\transformed\core-1.10.1\AndroidManifest.xml:24:9-44
+34
+35    <uses-permission android:name="com.example.flutter_application_1.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+35-->[androidx.core:core:1.10.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\0338a032e974f1e30b0ac09ddc181517\transformed\core-1.10.1\AndroidManifest.xml:26:5-97
+35-->[androidx.core:core:1.10.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\0338a032e974f1e30b0ac09ddc181517\transformed\core-1.10.1\AndroidManifest.xml:26:22-94
+36
+37    <application
+38        android:name="android.app.Application"
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.10.1] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\0338a032e974f1e30b0ac09ddc181517\transformed\core-1.10.1\AndroidManifest.xml:28:18-86
+40        android:debuggable="true"
+41        android:icon="@mipmap/ic_launcher"
+42        android:label="flutter_application_1"
+43        android:largeHeap="true"
+43-->[:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-33
+44        android:theme="@style/Theme.AppCompat.NoActionBar" >
+44-->[:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-59
+45        <activity
+46            android:name="com.example.flutter_application_1.MainActivity"
+47            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+48            android:exported="true"
+49            android:hardwareAccelerated="true"
+50            android:launchMode="singleTop"
+51            android:theme="@style/LaunchTheme"
+52            android:windowSoftInputMode="adjustResize" >
+53
+54            <!--
+55                 Specifies an Android theme to apply to this Activity as soon as
+56                 the Android process has started. This theme is visible to the user
+57                 while the Flutter UI initializes. After that, this theme continues
+58                 to determine the Window background behind the Flutter UI.
+59            -->
+60            <meta-data
+61                android:name="io.flutter.embedding.android.NormalTheme"
+62                android:resource="@style/NormalTheme" />
+63
+64            <intent-filter>
+65                <action android:name="android.intent.action.MAIN" />
+66
+67                <category android:name="android.intent.category.LAUNCHER" />
+68            </intent-filter>
+69        </activity>
+70        <!--
+71             Don't delete the meta-data below.
+72             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+73        -->
+74        <meta-data
+75            android:name="flutterEmbedding"
+76            android:value="2" />
+77
+78        <activity android:name="com.amolg.flutterbarcodescanner.BarcodeCaptureActivity" />
+78-->[:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:18:9-91
+78-->[:flutter_barcode_scanner] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\flutter_barcode_scanner\intermediates\merged_manifest\debug\AndroidManifest.xml:18:19-88
+79        <activity
+79-->[:url_launcher_android] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:10:9-13:74
+80            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+80-->[:url_launcher_android] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:11:13-74
+81            android:exported="false"
+81-->[:url_launcher_android] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:12:13-37
+82            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+82-->[:url_launcher_android] C:\Users\Albert Luzuriaga\OneDrive\Desktop\mobile_parking_occupant\build\url_launcher_android\intermediates\merged_manifest\debug\AndroidManifest.xml:13:13-71
+83
+84        <uses-library
+84-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:25:9-27:40
+85            android:name="androidx.window.extensions"
+85-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:26:13-54
+86            android:required="false" />
+86-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:27:13-37
+87        <uses-library
+87-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:28:9-30:40
+88            android:name="androidx.window.sidecar"
+88-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:29:13-51
+89            android:required="false" />
+89-->[androidx.window:window:1.0.0-beta04] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\8dc3965d5e17a31c03ea594a186cc2fc\transformed\jetified-window-1.0.0-beta04\AndroidManifest.xml:30:13-37
 90
-91</manifest>
+91        <activity
+91-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:23:9-26:75
+92            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+92-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:24:13-79
+93            android:exported="false"
+93-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:25:13-37
+94            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+94-->[com.google.android.gms:play-services-base:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\01c20b2eec324df0fdc57853e24710a8\transformed\jetified-play-services-base-17.4.0\AndroidManifest.xml:26:13-72
+95
+96        <meta-data
+96-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:23:9-25:69
+97            android:name="com.google.android.gms.version"
+97-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:24:13-58
+98            android:value="@integer/google_play_services_version" />
+98-->[com.google.android.gms:play-services-basement:17.4.0] C:\Users\Albert Luzuriaga\.gradle\caches\transforms-3\cc5d0a363769c3c743d30d530ab78084\transformed\jetified-play-services-basement-17.4.0\AndroidManifest.xml:25:13-66
+99    </application>
+100
+101</manifest>

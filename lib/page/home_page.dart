@@ -6,13 +6,17 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../utils/scan_activity.dart';
 import '../utils/enc-dec.dart';
-import '../utils/scan_activity.dart';
 import '../utils/parkinglogrecord.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';  // Import dotenv
 import 'package:flutter/foundation.dart';
 import 'dart:io';
 import 'package:flutter_application_1/model/environment.dart'; 
 import './parking_log_page.dart';
+import 'package:url_launcher/url_launcher.dart'; // Import the url_launcher package
+import '../utils/dialog_helpers.dart';
+import '../utils/contact_options.dart';
+import '../utils/ui_helpers.dart';
+import '../utils/shared_preferences_util.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -30,16 +34,21 @@ class _HomePageState extends State<HomePage> {
     void initState() {
       super.initState();
       
-      aesKey = Environment.aesKey; // Correct assignment to the field
-      
-      if (aesKey.isEmpty) {
-        print('Error: AES Key is missing!');
-      } else {
-        print('AES Key loaded successfully tan-awa: $aesKey');
+      try {
+        aesKey = Environment.aesKey;  // Attempt to retrieve AES key from environment
+        if (aesKey.isEmpty) {
+          throw Exception('AES key is missing.');
+        } else {
+          print('AES Key loaded successfully: $aesKey');
+        }
+      } catch (e) {
+        print('Error loading AES key: $e');
+        _showAESKeyErrorDialog();  // Show error dialog if AES key is missing
       }
 
       _loadPersonnelId(); // Load personnel ID from SharedPreferences or another source
     }
+
 
 
   Future<void> _loadPersonnelId() async {
@@ -52,12 +61,19 @@ class _HomePageState extends State<HomePage> {
 
   Future<void> _handleScan() async {
     String qrCodeData = await ScanActivity.scanQrCode(context);
+
     if (qrCodeData.isNotEmpty) {
       setState(() {
         decryptedText = EncryptionUtil.decryptData(aesKey, qrCodeData);
       });
 
       print('Decrypted Data: $decryptedText');
+
+      // Check if the decrypted text is empty or invalid
+      if (decryptedText.isEmpty) {
+        _showInvalidQRCodeErrorDialog(); // Show invalid QR code error dialog
+        return; // Stop execution if the QR code is invalid
+      }
 
       try {
         final info = await ScanActivity.fetchOccupantVehicleInfo(decryptedText);
@@ -71,312 +87,393 @@ class _HomePageState extends State<HomePage> {
             throw Exception("Failed to fetch occupant or vehicle information.");
         }
 
-showDialog(
-  context: context,
-  builder: (context) => Dialog(
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(16.0),
-    ),
-    elevation: 0,
-    backgroundColor: Colors.transparent,
-    child: Container(
-      padding: const EdgeInsets.all(20.0),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(16.0),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.15),
-            blurRadius: 20.0,
-            offset: Offset(0, 10),
-          ),
-        ],
-      ),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.blueAccent, // Consistent with the original color
-              borderRadius: BorderRadius.vertical(top: Radius.circular(16.0)),
-            ),
-            padding: const EdgeInsets.all(16.0),
-            child: const Text(
-              'Scan Result',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24.0,
-                fontWeight: FontWeight.bold,
+          showDialog(
+            context: context,
+            builder: (context) => Dialog(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16.0),
               ),
-              textAlign: TextAlign.center,
-            ),
-          ),
-          const SizedBox(height: 20.0),
-          if (occupantVehicleInfo != null)
-            Center(
-              child: Column(
-                children: [
-                  if (occupantVehicleInfo!['profilePicture'] != null)
-                    CircleAvatar(
-                      radius: 60.0,
-                      backgroundImage: MemoryImage(base64Decode(occupantVehicleInfo!['profilePicture'])),
+              elevation: 0,
+              backgroundColor: Colors.transparent,
+              child: Container(
+                padding: const EdgeInsets.all(20.0),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(16.0),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.15),
+                      blurRadius: 20.0,
+                      offset: Offset(0, 10),
                     ),
-                  const SizedBox(height: 16.0),
-                  Text(
-                    '${occupantVehicleInfo!['Firstname']} ${occupantVehicleInfo!['Lastname']}',
-                    style: const TextStyle(
-                      fontSize: 22.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87,
+                  ],
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.blueAccent,
+                        borderRadius: BorderRadius.vertical(top: Radius.circular(16.0)),
+                      ),
+                      padding: const EdgeInsets.all(16.0),
+                      child: const Text(
+                        'Scan Result',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 24.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(height: 10.0),
-                  _buildInfoRow('Phone Number', occupantVehicleInfo!['Phonenumber']),
-                  _buildInfoRow('Vehicle Type', occupantVehicleInfo!['Vehicle_Type']),
-                  _buildInfoRow('Vehicle Color', occupantVehicleInfo!['Vehicle_Color']),
-                  _buildInfoRow('Plate Number', occupantVehicleInfo!['Vehicle_Platenumber']),
-                  _buildInfoRow('Model', occupantVehicleInfo!['Vehicle_Model']),
-                  _buildInfoRow('Brand', occupantVehicleInfo!['Vehicle_Brand']),
-                  const SizedBox(height: 20.0),
-                  _buildAddressSection(occupantVehicleInfo!['Address']),
-                  const SizedBox(height: 20.0),
-                  Text(
-                    'Do you want to log this entry?',
-                    style: const TextStyle(
-                      fontSize: 18.0,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black87,
+                    const SizedBox(height: 20.0),
+                    if (occupantVehicleInfo != null)
+                      Center(
+                        child: Column(
+                          children: [
+                            if (occupantVehicleInfo!['profilePicture'] != null)
+                              CircleAvatar(
+                                radius: 60.0,
+                                backgroundImage: MemoryImage(base64Decode(occupantVehicleInfo!['profilePicture'])),
+                              ),
+                            const SizedBox(height: 16.0),
+                            Text(
+                              '${occupantVehicleInfo!['Firstname']} ${occupantVehicleInfo!['Lastname']}',
+                              style: const TextStyle(
+                                fontSize: 22.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black87,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                            const SizedBox(height: 10.0),
+
+                            // Tap Gesture on Phone Number to show second dialog
+                            GestureDetector(
+                              onTap: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (context) => Dialog(
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(20.0), // Sleeker, modern corner radius
+                                    ),
+                                    elevation: 8, // Slight elevation for a premium feel
+                                    backgroundColor: Colors.transparent,
+                                    child: Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 30.0),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(20.0),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.black.withOpacity(0.15),
+                                            blurRadius: 30.0,
+                                            offset: Offset(0, 10),
+                                          ),
+                                        ],
+                                      ),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                                        children: [
+                                          // Header with icon and title
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Icon(Icons.phone_android, size: 40, color: Colors.blueAccent),
+                                              const SizedBox(width: 10.0),
+                                              Text(
+                                                'Contact Options',
+                                                style: TextStyle(
+                                                  fontSize: 22.0,
+                                                  fontWeight: FontWeight.w700,
+                                                  color: Colors.black87,
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                          const SizedBox(height: 25.0),
+
+                                          // Call and Text buttons
+                                          Row(
+                                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                            children: [
+                                              _buildContactOption(
+                                                icon: Icons.phone,
+                                                label: 'Call',
+                                                color: Colors.green,
+                                                onPressed: () {
+                                                  final phoneNumber = occupantVehicleInfo!['Phonenumber'];
+                                                  if (phoneNumber != null) {
+                                                    _makePhoneCall(phoneNumber);
+                                                  }
+                                                },
+                                              ),
+                                              _buildContactOption(
+                                                icon: Icons.message,
+                                                label: 'Text',
+                                                color: Colors.blueAccent,
+                                                onPressed: () {
+                                                  final phoneNumber = occupantVehicleInfo!['Phonenumber'];
+                                                  if (phoneNumber != null) {
+                                                    _sendSMS(phoneNumber);
+                                                  }
+                                                },
+                                              ),
+                                            ],
+                                          ),
+                                          const SizedBox(height: 30.0),
+
+                                          // Cancel button
+                                          Center(
+                                            child: ElevatedButton(
+                                              onPressed: () {
+                                                Navigator.pop(context); // Close dialog
+                                              },
+                                              child: const Text('Cancel'),
+                                              style: ElevatedButton.styleFrom(
+                                                padding: EdgeInsets.symmetric(horizontal: 40.0, vertical: 14.0),
+                                                primary: Colors.redAccent,
+                                                onPrimary: Colors.white,
+                                                textStyle: TextStyle(
+                                                  fontSize: 18.0,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
+                                                shape: RoundedRectangleBorder(
+                                                  borderRadius: BorderRadius.circular(30.0),
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ),
+                                );
+                              },
+                              child: _buildInfoRow('Phone Number', occupantVehicleInfo!['Phonenumber']),
+                            ),
+
+                            _buildInfoRow('Vehicle Type', occupantVehicleInfo!['Vehicle_Type']),
+                            _buildInfoRow('Vehicle Color', occupantVehicleInfo!['Vehicle_Color']),
+                            _buildInfoRow('Plate Number', occupantVehicleInfo!['Vehicle_Platenumber']),
+                            _buildInfoRow('Model', occupantVehicleInfo!['Vehicle_Model']),
+                            _buildInfoRow('Brand', occupantVehicleInfo!['Vehicle_Brand']),
+                            const SizedBox(height: 20.0),
+                            _buildAddressSection(occupantVehicleInfo!['Address']),
+                            const SizedBox(height: 20.0),
+                            Text(
+                              'Do you want to log this entry?',
+                              style: const TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black87,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ],
+                        ),
+                      )
+                    else
+                      const Center(child: Text('No data found')),
+
+                    const SizedBox(height: 20.0),
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        ElevatedButton(
+                          onPressed: () async {
+                            final occupantId = occupantVehicleInfo!['occupantId'] ?? occupantVehicleInfo!['Occupant_ID'] as int?;
+                            final vehicleId = occupantVehicleInfo!['vehicleId'] ?? occupantVehicleInfo!['Vehicle_ID'] as int?;
+
+                            if (occupantId != null && vehicleId != null) {
+                              String? lastActionType = await ParkingLogRecord.fetchLastActionType(vehicleId);
+                              String actionType = lastActionType == null || lastActionType == 'EXIT' ? 'ENTRY' : 'EXIT';
+                              await ParkingLogRecord.recordLog(
+                                occupantId: occupantId,
+                                vehicleId: vehicleId,
+                                actionType: actionType,
+                                personnelId: personnelId,
+                              );
+
+                              showDialog(
+                                context: context,
+                                barrierDismissible: true,
+                                builder: (context) {
+                                  Color iconColor = actionType == 'ENTRY' ? Colors.blueAccent : Colors.redAccent;
+                                  Color actionTypeColor = actionType == 'ENTRY' ? Colors.blueAccent : Colors.redAccent;
+
+                                  return Dialog(
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12.0),
+                                    ),
+                                    elevation: 0,
+                                    backgroundColor: Colors.transparent,
+                                    child: Container(
+                                      padding: const EdgeInsets.all(20.0),
+                                      decoration: BoxDecoration(
+                                        color: Colors.white,
+                                        borderRadius: BorderRadius.circular(12.0),
+                                        boxShadow: [
+                                          BoxShadow(
+                                            color: Colors.black.withOpacity(0.2),
+                                            blurRadius: 15.0,
+                                            offset: Offset(0, 5),
+                                          ),
+                                        ],
+                                      ),
+                                      child: Column(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          Icon(
+                                            Icons.check_circle_outline,
+                                            color: iconColor,
+                                            size: 60.0,
+                                          ),
+                                          const SizedBox(height: 16.0),
+                                          Text(
+                                            'Log Successful',
+                                            style: TextStyle(
+                                              color: Colors.black87,
+                                              fontSize: 22.0,
+                                              fontWeight: FontWeight.bold,
+                                            ),
+                                            textAlign: TextAlign.center,
+                                          ),
+                                          const SizedBox(height: 10.0),
+                                          RichText(
+                                            textAlign: TextAlign.center,
+                                            text: TextSpan(
+                                              style: TextStyle(
+                                                color: Colors.black87,
+                                                fontSize: 16.0,
+                                              ),
+                                              children: [
+                                                TextSpan(
+                                                  text: 'The entry has been logged as ',
+                                                ),
+                                                TextSpan(
+                                                  text: actionType,
+                                                  style: TextStyle(
+                                                    color: actionTypeColor,
+                                                    fontSize: 16.0,
+                                                    fontWeight: FontWeight.bold,
+                                                  ),
+                                                ),
+                                                TextSpan(
+                                                  text: '.',
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                          const SizedBox(height: 20.0),
+                                          ElevatedButton(
+                                            child: const Text('OK'),
+                                            onPressed: () {
+                                              Navigator.pop(context);
+                                              Navigator.pop(context);
+                                            },
+                                            style: ElevatedButton.styleFrom(
+                                              primary: Colors.blueAccent,
+                                              onPrimary: Colors.white,
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius: BorderRadius.circular(8.0),
+                                              ),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  );
+                                },
+                              );
+                            }
+                          },
+                          child: const Text('Confirm'),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.blueAccent,
+                            onPrimary: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                          ),
+                        ),
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          child: const Text('Cancel'),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.redAccent,
+                            onPrimary: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-            )
-          else
-            const Center(child: Text('No data found')),
-          const SizedBox(height: 20.0),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ElevatedButton(
-                onPressed: () async {
-                  final occupantId = occupantVehicleInfo!['occupantId'] ?? occupantVehicleInfo!['Occupant_ID'] as int?;
-                  final vehicleId = occupantVehicleInfo!['vehicleId'] ?? occupantVehicleInfo!['Vehicle_ID'] as int?;
-
-                  if (occupantId != null && vehicleId != null) {
-                    String? lastActionType = await ParkingLogRecord.fetchLastActionType(vehicleId);
-                    String actionType = lastActionType == null || lastActionType == 'EXIT' ? 'ENTRY' : 'EXIT';
-                    await ParkingLogRecord.recordLog(
-                      occupantId: occupantId,
-                      vehicleId: vehicleId,
-                      actionType: actionType,
-                      personnelId: personnelId,
-                    );
-
-                    // Show success dialog
-showDialog(
-  context: context,
-  barrierDismissible: true, // Allow closing the dialog by clicking outside
-  builder: (context) {
-    // Determine colors based on action type
-    Color iconColor = actionType == 'ENTRY' ? Colors.blueAccent : Colors.redAccent; // Icon color based on action type
-    Color actionTypeColor = actionType == 'ENTRY' ? Colors.blueAccent : Colors.redAccent; // Color for action type text
-
-    return Dialog(
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12.0),
-      ),
-      elevation: 0,
-      backgroundColor: Colors.transparent,
-      child: Container(
-        padding: const EdgeInsets.all(20.0),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(12.0),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.2),
-              blurRadius: 15.0,
-              offset: Offset(0, 5),
-            ),
-          ],
-        ),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(
-              Icons.check_circle_outline,
-              color: iconColor,
-              size: 60.0,
-            ),
-            const SizedBox(height: 16.0),
-            Text(
-              'Log Successful',
-              style: TextStyle(
-                color: Colors.black87,
-                fontSize: 22.0,
-                fontWeight: FontWeight.bold,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 10.0),
-            RichText(
-              textAlign: TextAlign.center,
-              text: TextSpan(
-                style: TextStyle(
-                  color: Colors.black87,
-                  fontSize: 16.0,
-                ),
-                children: [
-                  TextSpan(
-                    text: 'The entry has been logged as ',
-                  ),
-                  TextSpan(
-                    text: actionType,
-                    style: TextStyle(
-                      color: actionTypeColor,
-                      fontSize: 16.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  TextSpan(
-                    text: '.',
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 20.0),
-            ElevatedButton(
-              child: const Text('OK'),
-              onPressed: () {
-                Navigator.pop(context); // Close the success dialog
-                Navigator.pop(context); // Close the initial dialog
-              },
-              style: ElevatedButton.styleFrom(
-                primary: Colors.blueAccent, // Consistent with the original color
-                onPrimary: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8.0),
+                  ],
                 ),
               ),
             ),
-          ],
-        ),
-      ),
-    );
-  },
-);
-
-
-                    
-                  }
-                },
-                child: const Text('Confirm'),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.blueAccent, // Consistent with the original color
-                  onPrimary: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                ),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-                child: const Text('Cancel'),
-                style: ElevatedButton.styleFrom(
-                  primary: Colors.redAccent,
-                  onPrimary: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ],
-      ),
-    ),
-  ),
-);
+          );
 
 
 
       } catch (e) {
         print('Error fetching info: $e');
-        showDialog(
-          context: context,
-          builder: (context) => AlertDialog(
-            title: const Text('Error'),
-            content: Text('Failed to fetch occupant and vehicle info. Error: $e'),
-            actions: [
-              ElevatedButton(
-                child: const Text('OK'),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
-            ],
-          ),
-        );
+         _showInvalidQRCodeErrorDialog();
+        // showDialog(
+        //   context: context,
+        //   builder: (context) => AlertDialog(
+        //     title: const Text('Error'),
+        //     content: Text('Failed to fetch occupant and vehicle info. Error: $e'),
+        //     actions: [
+        //       ElevatedButton(
+        //         child: const Text('OK'),
+        //         onPressed: () {
+        //           Navigator.pop(context);
+        //         },
+        //       ),
+        //     ],
+        //   ),
+        // );
       }
     }
   }
 
-Widget _buildInfoRow(String label, String? value) {
-  return Padding(
-    padding: const EdgeInsets.symmetric(vertical: 4.0),
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          '$label: ',
-          style: const TextStyle(
-            fontWeight: FontWeight.bold,
-            color: Colors.black54,
-          ),
-        ),
-        Text(
-          value ?? 'N/A',
-          style: const TextStyle(
-            color: Colors.black87,
-          ),
-        ),
-      ],
-    ),
-  );
+// AES Key Not Found Error Dialog
+void _showAESKeyErrorDialog() {
+  showAESKeyErrorDialog(context);
 }
 
-  Widget _buildAddressSection(String? address) {
-  return Container(
-    padding: const EdgeInsets.all(12.0),
-    decoration: BoxDecoration(
-      color: Colors.grey[200],
-      borderRadius: BorderRadius.circular(8.0),
-      border: Border.all(color: Colors.grey[400]!),
-    ),
-    child: Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const Icon(Icons.location_on, color: Colors.blueAccent),
-        const SizedBox(width: 8.0),
-        Expanded(
-          child: Text(
-            address ?? 'Address not available',
-            style: const TextStyle(
-              fontSize: 16.0,
-              color: Colors.black87,
-            ),
-            overflow: TextOverflow.ellipsis,
-            maxLines: 3,
-          ),
-        ),
-      ],
-    ),
-  );
+// Invalid QR Code Error Dialog
+void _showInvalidQRCodeErrorDialog() {
+  showInvalidQRCodeErrorDialog(context);
+}
+
+// Function to make a phone call
+void _makePhoneCall(String phoneNumber) {
+  makePhoneCall(phoneNumber);
+}
+
+// Function to send an SMS
+void _sendSMS(String phoneNumber) {
+  sendSMS(phoneNumber);
+}
+
+// For displaying information rows
+Widget _buildInfoRow(String label, String? value) {
+  return buildInfoRow(label, value);
+}
+
+// For displaying the address section
+Widget _buildAddressSection(String? address) {
+  return buildAddressSection(address);
 }
 
   @override
@@ -386,6 +483,7 @@ Widget _buildInfoRow(String label, String? value) {
         title: const Text('Guard App'),
         centerTitle: true,
         actions: [
+
           IconButton(
             icon: const Icon(Icons.logout),
             onPressed: () async {
@@ -396,6 +494,7 @@ Widget _buildInfoRow(String label, String? value) {
               );
             },
           ),
+
         ],
       ),
       body: Padding(
@@ -421,8 +520,6 @@ Widget _buildInfoRow(String label, String? value) {
               onPressed: _handleScan,
             ),
 
-
-
             const SizedBox(height: 20),
                 OutlinedButton.icon(
                   icon: const Icon(Icons.list),
@@ -444,15 +541,22 @@ Widget _buildInfoRow(String label, String? value) {
                     );
                   },
                 ),
-
-
-
-
+                
           ],
         ),
       ),
     );
   }
+}
+
+// Helper widget for contact options
+Widget _buildContactOption({
+  required IconData icon,
+  required String label,
+  required Color color,
+  required VoidCallback onPressed,
+}) {
+  return buildContactOption(icon: icon, label: label, color: color, onPressed: onPressed);
 }
 
 class ParkingLogScreen extends StatelessWidget {
@@ -474,20 +578,6 @@ class ParkingLogScreen extends StatelessWidget {
       ),
     );
   }
-
-  
 }
 
-class Shared {
-  static String loginSharedPreference = "LOGGEDINKEY";
 
-  static Future<bool> saveLoginSharedPreference(bool isLogin) async {
-    SharedPreferences prefs = await SharedPreferences.getInstance();
-    return await prefs.setBool(loginSharedPreference, isLogin);
-  }
-
-  static Future<bool> getUserSharedPreferences() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    return preferences.getBool(loginSharedPreference) ?? false;
-  }
-}

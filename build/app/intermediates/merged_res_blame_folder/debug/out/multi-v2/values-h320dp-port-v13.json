@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.flutter_application_1.app-mergeDebugResources-21:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
+            "outputFile": "com.example.flutter_application_1.app-mergeDebugResources-23:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
                     "source": "C:\\Users\\Albert Luzuriaga\\.gradle\\caches\\transforms-3\\a03f8cd5396392dba4080def04b26ddf\\transformed\\material-1.3.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
