@@ -36,7 +36,7 @@ class _ParkingLogPageState extends State<ParkingLogPage> {
   }
 
   Future<void> _fetchParkingLogs() async {
-    const String url = 'http://192.168.4.159:8080/parking_occupant/api/fetchParkingLogs.php';
+    const String url = 'http://192.168.94.159:8080/parking_occupant/api/fetchParkingLogs.php';
 
     try {
       final response = await http.get(Uri.parse(url));
@@ -169,6 +169,8 @@ class _ParkingLogPageState extends State<ParkingLogPage> {
                         ],
                       ),
                     ),
+
+
                     Expanded(
                       child: ListView.builder(
                         padding: const EdgeInsets.all(16.0),
@@ -182,72 +184,80 @@ class _ParkingLogPageState extends State<ParkingLogPage> {
                                 'Vehicle: ${log['vehicle']}',
                                 style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                               ),
-
-
-                            subtitle: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                SizedBox(height: 8),
-                                RichText(
-                                  text: TextSpan(
-                                    text: 'Occupant: ', 
-                                    style: TextStyle(fontSize: 16, color: Colors.black), 
-                                    children: [
-                                      TextSpan(
-                                        text: log['occupant_fullname'],
-                                        style: TextStyle(fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
+                              subtitle: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  SizedBox(height: 8),
+                                  RichText(
+                                    text: TextSpan(
+                                      text: 'Occupant: ',
+                                      style: TextStyle(fontSize: 16, color: Colors.black),
+                                      children: [
+                                        TextSpan(
+                                          text: log['occupant_fullname'],
+                                          style: TextStyle(fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                                RichText(
-                                  text: TextSpan(
-                                    text: 'Action: ', 
-                                    style: TextStyle(fontSize: 16, color: _getActionColor(log['action_type'])),
-                                    children: [
-                                      TextSpan(
-                                        text: log['action_type'],
-                                        style: TextStyle(fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
+                                  RichText(
+                                    text: TextSpan(
+                                      text: 'Parking Lot: ', // New field for parking lot
+                                      style: TextStyle(fontSize: 16, color: Colors.black),
+                                      children: [
+                                        TextSpan(
+                                          text: log['parking_lot_name'], // Bind parking lot data
+                                          style: TextStyle(fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                                RichText(
-                                  text: TextSpan(
-                                    text: 'Date: ', 
-                                    style: TextStyle(fontSize: 16, color: Colors.black),
-                                    children: [
-                                      TextSpan(
-                                        text: log['timestamp'],
-                                        style: TextStyle(fontWeight: FontWeight.normal),
-                                      ),
-                                    ],
+                                  RichText(
+                                    text: TextSpan(
+                                      text: 'Action: ',
+                                      style: TextStyle(fontSize: 16, color: _getActionColor(log['action_type'])),
+                                      children: [
+                                        TextSpan(
+                                          text: log['action_type'],
+                                          style: TextStyle(fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                                RichText(
-                                  text: TextSpan(
-                                    text: 'Scanned by: ', 
-                                    style: TextStyle(fontSize: 16, color: Colors.black), 
-                                    children: [
-                                      TextSpan(
-                                        text: log['personnel_fullname'],
-                                        style: TextStyle(fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
+                                  RichText(
+                                    text: TextSpan(
+                                      text: 'Date: ',
+                                      style: TextStyle(fontSize: 16, color: Colors.black),
+                                      children: [
+                                        TextSpan(
+                                          text: log['timestamp'],
+                                          style: TextStyle(fontWeight: FontWeight.normal),
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-
-
-                              
+                                  RichText(
+                                    text: TextSpan(
+                                      text: 'Scanned by: ',
+                                      style: TextStyle(fontSize: 16, color: Colors.black),
+                                      children: [
+                                        TextSpan(
+                                          text: log['personnel_fullname'],
+                                          style: TextStyle(fontWeight: FontWeight.bold),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
                               isThreeLine: true,
-                              
                             ),
                           );
                         },
                       ),
                     ),
+
+
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: ElevatedButton(

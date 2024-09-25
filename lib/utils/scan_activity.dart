@@ -27,7 +27,7 @@ class ScanActivity {
   }
 
   static Future<Map<String, dynamic>> fetchOccupantVehicleInfo(String decryptedData) async {
-    String url = 'http://192.168.4.159:8080/parking_occupant/api/GetOccupantVehicleInfo.php';
+    String url = 'http://192.168.94.159:8080/parking_occupant/api/GetOccupantVehicleInfo.php';
 
     // Debugging: Log decryptedData before processing
     print('Decrypted Data before decoding: $decryptedData');

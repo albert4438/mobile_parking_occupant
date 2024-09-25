@@ -2,53 +2,95 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class ParkingLogRecord {
+  
+  // static Future<void> recordLog({
+  //   required int occupantId,
+  //   required int vehicleId,
+  //   required String actionType,
+  //   required int personnelId,
+  //   required String parkingLotId,
+  // }) async {
+  //   final String url = 'http://192.168.4.159:8080/parking_occupant/api/RecordParkingLog.php'; // Ensure this URL is correct
+
+  //   final Map<String, dynamic> data = {
+  //     'occupant_id': occupantId,
+  //     'vehicle_id': vehicleId,
+  //     'action_type': actionType,
+  //     'personnel_id': personnelId,
+  //     'parking_lot_id': parkingLotId
+  //   };
+
+  //     try {
+  //       final response = await http.post(
+  //         Uri.parse(url),
+  //         headers: {'Content-Type': 'application/json'},
+  //         body: json.encode(data),
+  //       );
+
+  //       if (response.statusCode == 200) {
+  //         try {
+  //           final responseData = json.decode(response.body);
+  //           if (responseData['success']) {
+  //             print('Log recorded successfully');
+  //           } else {
+  //             print('Failed to record log: ${responseData['message']}');
+  //           }
+  //         } catch (e) {
+  //           print('Failed to parse JSON response: ${response.body}');
+  //         }
+  //       } else {
+  //         print('Failed to record log: ${response.statusCode} ${response.body}');
+  //       }
+  //     } catch (e) {
+  //       print('Error recording log: $e');
+  //     }
+
+  // }
+
   static Future<void> recordLog({
     required int occupantId,
     required int vehicleId,
     required String actionType,
     required int personnelId,
+    required int parkingLotId,  // Changed to int
   }) async {
-    final String url = 'http://192.168.4.159:8080/parking_occupant/api/RecordParkingLog.php'; // Ensure this URL is correct
+    final String url = 'http://192.168.94.159:8080/parking_occupant/api/RecordParkingLog.php'; // Ensure this URL is correct
 
     final Map<String, dynamic> data = {
       'occupant_id': occupantId,
       'vehicle_id': vehicleId,
       'action_type': actionType,
-      'personnel_id': personnelId
+      'personnel_id': personnelId,
+      'parking_lot_id': parkingLotId,  // Now an int
     };
 
-      try {
-        final response = await http.post(
-          Uri.parse(url),
-          headers: {'Content-Type': 'application/json'},
-          body: json.encode(data),
-        );
+    try {
+      final response = await http.post(
+        Uri.parse(url),
+        headers: {'Content-Type': 'application/json'},
+        body: json.encode(data),
+      );
 
-        if (response.statusCode == 200) {
-          try {
-            final responseData = json.decode(response.body);
-            if (responseData['success']) {
-              print('Log recorded successfully');
-            } else {
-              print('Failed to record log: ${responseData['message']}');
-            }
-          } catch (e) {
-            print('Failed to parse JSON response: ${response.body}');
-          }
+      if (response.statusCode == 200) {
+        final responseData = json.decode(response.body);
+        if (responseData['success']) {
+          print('Log recorded successfully');
         } else {
-          print('Failed to record log: ${response.statusCode} ${response.body}');
+          print('Failed to record log: ${responseData['message']}');
         }
-      } catch (e) {
-        print('Error recording log: $e');
+      } else {
+        print('Failed to record log: ${response.statusCode} ${response.body}');
       }
-
+    } catch (e) {
+      print('Error recording log: $e');
+    }
   }
 
 
   // In the ParkingLogRecord class
 
   static Future<String?> fetchLastActionType(int vehicleId) async {
-  final String url = 'http://192.168.4.159:8080/parking_occupant/api/GetLastActionType.php'; // Ensure this URL is correct
+  final String url = 'http://192.168.94.159:8080/parking_occupant/api/GetLastActionType.php'; // Ensure this URL is correct
 
   try {
     final response = await http.post(
@@ -74,7 +116,6 @@ class ParkingLogRecord {
 }
 
 }
-
 
 
 

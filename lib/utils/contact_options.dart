@@ -23,6 +23,8 @@ Widget buildContactOption({
   );
 }
 
+
+
 // Function to make a phone call
 Future<void> makePhoneCall(String phoneNumber) async {
   final Uri launchUri = Uri(
@@ -37,14 +39,31 @@ Future<void> makePhoneCall(String phoneNumber) async {
 }
 
 // Function to send an SMS
-Future<void> sendSMS(String phoneNumber) async {
+// Future<void> sendSMS(String phoneNumber) async {
+//   final Uri launchUri = Uri(
+//     scheme: 'sms',
+//     path: phoneNumber,
+//   );
+//   if (await canLaunchUrl(launchUri)) {
+//     await launchUrl(launchUri);
+//   } else {
+//     throw 'Could not launch $launchUri';
+//   }
+// }
+
+Future<void> sendSMS(String phoneNumber, String message) async {
   final Uri launchUri = Uri(
     scheme: 'sms',
     path: phoneNumber,
+    query: 'body=$message', // No encoding applied, passing plain text
   );
+  
   if (await canLaunchUrl(launchUri)) {
     await launchUrl(launchUri);
   } else {
     throw 'Could not launch $launchUri';
   }
 }
+
+
+
